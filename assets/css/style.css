@@ -106,7 +106,7 @@ h6,
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 65px;
 }
 
 #main {
@@ -348,7 +348,7 @@ h6,
   top: 0;
   width: 130%;
   height: 95%;
-  background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)), url("../img/solar2.jpg") center top no-repeat;
+  background: linear-gradient(to right, rgba(33, 74, 94, 0.8), rgba(30, 67, 86, 0.6)), url("../img/solar2.jpg") center top no-repeat;
   z-index: 0;
   border-radius: 0 0 50% 50%;
   transform: translateX(-50%) rotate(0deg);
@@ -2315,8 +2315,7 @@ section {
 #footer .credits a {
   color: #a2cce3;
 }
-<<<<<<< HEAD
-=======
+
 
 .centered {
   position: absolute;
@@ -2340,4 +2339,4 @@ section {
   right:50%;
   transform:translate(50%, -50%);
 }
->>>>>>> 3e9410b (code update)
+
