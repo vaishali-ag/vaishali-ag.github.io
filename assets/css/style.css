@@ -2339,4 +2339,8 @@ section {
   right:50%;
   transform:translate(50%, -50%);
 }
+div.center {
 
+  text-align: center;
+  
+  }
