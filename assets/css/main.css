@@ -1451,7 +1451,8 @@ section,
 
 .visit-us .card-item p {
   font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  /* color: color-mix(in srgb, var(--default-color), transparent 40%); */
+  color: #1f1f24;
   margin: 0;
   padding: 0;
 }
@@ -1504,7 +1505,7 @@ section,
   padding: 10px 20px;
   font-size: 18px;
   color: white;
-  background-color: #ce1212; /* Customize button color */
+  background-color: var(--accent-color); /* Customize button color */
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -1512,7 +1513,7 @@ section,
 }
 
 .button-overlay button:hover {
-  background-color: #ce1212; /* Darken button color on hover */
+  background-color: var(--accent-color); /* Darken button color on hover */
   transform: scale(1.05); /* Slight scale effect on hover */
 }
 
@@ -1653,6 +1654,7 @@ delivery section
   display: flex;
   justify-content: space-between;
   position: relative;
+  
 }
 
 .menu .menu-content::after {
@@ -1667,7 +1669,7 @@ delivery section
 }
 
 .menu .menu-content a {
-  color: var(--heading-color);
+  color: var(--accent-color);
   background: var(--background-color);
   padding-right: 10px;
   position: relative;
