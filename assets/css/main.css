@@ -293,8 +293,10 @@ background-color: #e3ddcc;
 }
 
 .header .logo img {
-  max-height: 100px;
-  margin-right: 50pxpx;
+  max-height: 200px;
+  margin-right: 50px;
+  mix-blend-mode:multiply;
+
   
 
 
@@ -2311,6 +2313,9 @@ margin-top: 0;
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
+
+
 
 /*--------------------------------------------------------------
 # banner Section Section

@@ -26,7 +26,25 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/G4ryQnqqsCw0Vuc2/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
   <!-- =======================================================
   * Template Name: Yummy
   * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
@@ -38,18 +56,17 @@
 
 <body class="starter-page-page">
 
+ 
   <header id="header" class="header d-flex align-items-center sticky-top">
-    
 
+    <!-- <img src="assets/img/logo.png" height="200px" width="200px" class="text-center"> -->
   
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+          <img src="assets/img/logo-1.jpeg" alt="">
       <!-- <h1 class="sitename">Yummy</h1> -->
-      <img src="assets/img/logo-1.jpeg" alt="">
-
         <!-- <span>.</span> -->
       </a>
 
@@ -62,15 +79,15 @@
           <li><a href="Corporate.html">Corporates</a></li>
           <li><a href="Takeout.html">Take Out</a></li>          
           <li><a href="Contact.html">Contact</a></li>
-
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#book-a-table">Book a Table</a>
+      <a class="btn-getstarted" href="index.html#book-a-table">Order Online</a>
 
     </div>
   </header>
+
 
   <main class="main">
 
@@ -127,42 +144,21 @@
           </div>
 
           <div class="col-lg-8">
-            <form id="contactForm" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
 
-                <div class="col-md-6">
-                  <input type="text" name="name" for ="Name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" for="Email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" for="Message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <!-- <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div> -->
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
+            <form id="myForm" class="php-email-form">
+              <br/>
+              <input name="full_name" type="text" class="form-control" placeholder="Your Name" required=""/>
+              <br/>
+              <input name="email" type="email"  class="form-control" placeholder="Your Email" required="" />
+                            <br/>
+              <textarea name="message" type="text"  class="form-control" rows="6" placeholder="Message" required="">
+              </textarea>
+              <br/>
             </form>
-          </div><!-- End Contact Form -->
 
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
+            <button type="submit" onclick="SubForm()">Send Message</button>
+            </div></div></div></section>
+           
 
   </main>
 
