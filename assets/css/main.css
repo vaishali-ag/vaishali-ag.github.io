@@ -18,7 +18,7 @@
 }
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --background-color: #e3ddcc ; /* Background color for the entire website, including individual sections */
   --default-color: #ed1c24; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #ed1c24; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -28,9 +28,9 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-color: #141313;  /* The default color of the main navmenu links */
+  --nav-hover-color: black; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #e3ddcc; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
@@ -63,6 +63,10 @@ body {
   font-family: var(--default-font);
   background-color: #454141; /* Light gray background for the space between sections */
 
+}
+body, html {
+  margin: 0;
+  padding: 0;
 }
 
 /* starter page background */
@@ -128,8 +132,19 @@ h6 {
   font-family: var(--heading-font);
 }
 
+  .heading-index
+{
+  color: black;
+  align-items: center;
+  text-align: center;
+  background-color: var(--accent-color);
+
+  position: relative;
+}
+
 /* Pulsating Play Button
 ------------------------------*/
+
 .pulsating-play-btn {
   width: 94px;
   height: 94px;
@@ -265,10 +280,11 @@ h6 {
 .header {
   color: var(--default-color);
   /* background-color: var(--background-color); */
-background-color: #ed1c24;
+background-color: #e3ddcc;
   padding: 50px 0;
   transition: all 0.5s;
   z-index: 997;
+  margin-bottom: 0;
   height: 10px;
 }
 
@@ -277,7 +293,7 @@ background-color: #ed1c24;
 }
 
 .header .logo img {
-  max-height: 200px;
+  max-height: 100px;
   margin-right: 50pxpx;
   
 
@@ -360,7 +376,7 @@ background-color: #ed1c24;
     min-height: 100vh;
     max-width: 100%;
     padding-left: 50px;
-    padding-right: 50px;
+        padding-right: 50px;
     max-height: 100vh;
     object-fit: cover;
     z-index: -1;
@@ -537,7 +553,7 @@ background-color: #ed1c24;
 
 .carousel-inner img {
   object-fit: cover;
-  height: 500px; /* Adjust to your desired height */
+  height: 100%; /* Adjust to your desired height */
 }
 
 .carousel-caption {
@@ -560,8 +576,10 @@ background-color: #ed1c24;
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
+
 @media (min-width: 1200px) {
   .navmenu {
+    margin: 0;
     padding: 0;
 
   }
@@ -1020,7 +1038,7 @@ section,
   background-color: var(--background-color); */
   color: #e3ddcc;
 
-  padding: 60px 0;
+  /* padding: 60px 0; */
   scroll-margin-top: 92px;
   overflow: clip;
 }
@@ -1603,8 +1621,10 @@ delivery section
 # Menu Section
 --------------------------------------------------------------*/
 .menu {
-  background-color: color-mix(in srgb, var(--background-color) 90%, white 5%);
+margin-top: 0;
+  /* background-color: color-mix(in srgb, var(--background-color) 90%, white 5%); */
 }
+
 
 .menu .menu-filters {
   padding: 0;
