@@ -356,82 +356,57 @@ background-color: #e3ddcc;
   overflow: hidden;
   margin-bottom: -7px;
 }
-
 /* Video Section Styling */
 .video-section {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+}
 
-}
-@media (max-width: 768px) {
-  .video-overlay .col-lg-8 {
-    grid-template-columns: 1fr; /* 1 column layout */
-  }
-}
 #bg-video {
-  
   min-width: 100%;
-    min-height: 100vh;
-    max-width: 100%;
-    padding-left: 50px;
-        padding-right: 50px;
-    max-height: 100vh;
-    object-fit: cover;
-    z-index: -1;
+  min-height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
 #bg-video::-webkit-media-controls {
   display: none !important;
 }
-/* .video-div{
-  height: 100%;
-  width: 100%;
-  padding: 50px;
-} */
+
 .video-overlay {
   position: absolute;
-    /* background-color: rgba(144, 122, 72, 0.85); */
-    top: 0;
-    left: 0;
-    bottom: 7px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center; /* Vertical centering */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; 
   justify-content: center;
-  /* background: rgba(0, 0, 0, 0.5);  */
-   
 }
+
+/* Responsive Grid Layout */
 .video-overlay .col-lg-8 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Create 2 columns */
-  grid-gap: 20px; /* Space between rows and columns */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   max-width: 1200px; 
-  width: 100%; /* Ensure it spans full width */
+  width: 100%; 
 }
 
-.icon-box {
-  text-align: center; /* Center text within each box */
-}
-
-.video-overlay .col-lg-4 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  max-width: 1200px;
-  text-align: center;
-}
-
+/* Icon Box Styling */
 .icon-box {
   background: #e3ddcc;
   border-radius: 10px;
   padding: 20px;
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
 }
 
 .icon-box:hover {
@@ -458,6 +433,12 @@ background-color: #e3ddcc;
   color: #666;
 }
 
+.icon-box:hover h2,
+.icon-box:hover p {
+  color: #a80000; /* Text color change on hover */
+}
+
+/* Button Styling */
 .btn-getstarted {
   display: inline-block;
   padding: 10px 20px;
@@ -467,25 +448,13 @@ background-color: #e3ddcc;
   font-size: 0.9rem;
   font-weight: bold;
   border-radius: 5px;
-  transition:  0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .btn-getstarted:hover {
-  background: #cb340a;
+  background: #a80000;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .video-overlay .col-lg-8 {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .icon-box {
-    width: 100%;
-    max-width: 300px;
-  }
-}
 
 
 .main-banner .caption {
