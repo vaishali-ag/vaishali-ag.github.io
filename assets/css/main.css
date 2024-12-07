@@ -1534,7 +1534,8 @@ delivery section
 /* Delivery Banner Styles */
 .delivery-banner {
   position: relative;
-  background: url("../img/about-2.jpg") no-repeat center center/cover;
+  /* background: url("../img/logo.png") no-repeat center center/cover; */
+  background-color: green;
   height: 300px; /* Adjust height as needed */
   display: flex;
   align-items: center;
