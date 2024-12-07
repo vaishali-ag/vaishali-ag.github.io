@@ -134,11 +134,12 @@ h6 {
 
   .heading-index
 {
-  color: black;
+  color: white;
+  font-style: bold;
   align-items: center;
   text-align: center;
   background-color: var(--accent-color);
-
+padding: 1%;
   position: relative;
 }
 
@@ -280,7 +281,7 @@ h6 {
 .header {
   color: var(--default-color);
 background-color: #e3ddcc;
-  padding: 50px 0;
+  padding: 40px 0;
   transition: all 0.5s;
   z-index: 997;
   margin-bottom: 0;
@@ -371,7 +372,7 @@ background-color: #e3ddcc;
 .video-section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
 }
 
@@ -725,7 +726,7 @@ background-color: #e3ddcc;
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-dropdown-color);
+    color: black;
     padding: 10px 20px;
     font-family: var(--nav-font);
     font-size: 17px;
@@ -761,7 +762,7 @@ background-color: #e3ddcc;
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
+    color: black;
   }
 
   .navmenu .active i,
