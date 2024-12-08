@@ -19,9 +19,9 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #e3ddcc ; /* Background color for the entire website, including individual sections */
-  --default-color: #ed1c24; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #c71f2c; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ed1c24; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #c71f2c; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -115,13 +115,14 @@ section.page-heading {
 .page-heading h1 {
 	margin-top: 0px;
   margin-bottom: 20px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family:cursive ;
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #FFB534;
+  color: #c71f2c;
+
   background: rgba(222, 220, 220, 0.5); 
-  border: 2px solid #059652; 
+  /* border: 2px solid #059652;  */
   display: inline-block;
   padding: 10px 20px; 
   border-radius: 5px;
@@ -478,7 +479,7 @@ background-color: #e3ddcc;
 
 .icon-box i {
   font-size: 2rem;
-  color: #ed1c24;
+  color: #c71f2c;
   margin-bottom: 15px;
 }
 
@@ -497,7 +498,7 @@ background-color: #e3ddcc;
 
 .icon-box:hover h2,
 .icon-box:hover p {
-  color: #ed1c24; /* Text color change on hover */
+  color: #c71f2c; /* Text color change on hover */
 }
 
 /* Button Styling */
@@ -1592,7 +1593,8 @@ about us
 }
 
 .about-content {
-  background: rgba(222, 220, 220, 0.9); /* Semi-transparent overlay */
+  background: rgba(227, 221, 204, 0.9); 
+  /* background: rgba(222, 220, 220, 0.9);  */
   padding: 20px;
   border-radius: 10px;
 }
