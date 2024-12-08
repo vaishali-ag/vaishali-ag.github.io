@@ -88,8 +88,47 @@ body, html {
 } */
 .starter-background-section{
   background-color: #e3ddcc;
+  /* border: 5px solid color-mix(in srgb, var(--accent-color), transparent 30%);  */
+  /* background: radial-gradient(var(--accent-color) 50%, color-mix(in srgb, var(--accent-color), transparent 75%) 52%); */
+
 
 }
+.starter-content {
+  background: #e3ddcc; 
+ 
+}
+
+
+
+section.page-heading {
+	padding: 80px 0px;
+	background-image: url(../img/menu/Pomfret\ fish\ fry.jpeg) ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	text-align: center; 
+  height: fit-content;
+
+}
+
+
+.page-heading h1 {
+	margin-top: 0px;
+	margin-bottom: 20px;
+	font-family: 'Spectral', serif;
+	font-size: 48px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #FFB534;
+}
+
+.page-heading p {
+	color: #fff;
+	font-size: 14px;
+	padding: 0px 25%;
+	margin-bottom: 0px;
+}
+
 /* about section background */
 
 .background-section {
@@ -102,7 +141,9 @@ body, html {
   
 }
 .content {
-  background: #e3ddcc; /* Slight white overlay for text visibility */
+  /* background: color-mix(in srgb, #ffb534, transparent 40%); */
+
+  background: #e3ddcc; 
   border-radius: 10px;
   padding: 20px;
   max-width: 1200px;
@@ -134,13 +175,14 @@ h6 {
 
   .heading-index
 {
-  color: white;
+  background-color: #587445;
   font-style: bold;
   align-items: center;
   text-align: center;
-  background-color: var(--accent-color);
+  color: #ffb534;
 padding: 1%;
   position: relative;
+  font-size: 2rem;
 }
 
 /* Pulsating Play Button
@@ -541,7 +583,7 @@ background-color: #e3ddcc;
 }
 
 .carousel-caption {
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  /* background: rgba(0, 0, 0, 0.5);  */
   padding: 10px;
   border-radius: 10px;
 }
@@ -1426,13 +1468,15 @@ section,
 # visit Us Section
 --------------------------------------------------------------*/
 .visit-us .card-item {
-  background: color-mix(in srgb, var(--default-color), transparent 95%);
   padding: 50px 30px;
   transition: all ease-in-out 0.3s;
   height: 100%;
   position: relative;
 }
+.visit-us .content{
+  background: color-mix(in srgb, #587445, transparent 0%);
 
+}
 .visit-us .card-item span {
   color: var(--accent-color);
   display: block;
@@ -1452,17 +1496,20 @@ section,
 }
 
 .visit-us .card-item p {
-  font-size: 15px;
+  font-size: 16px;
   /* color: color-mix(in srgb, var(--default-color), transparent 40%); */
-  color: #1f1f24;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
 .visit-us .visit-img {
-  border: 6px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  /* border: 6px solid color-mix(in srgb, var(--default-color), transparent 80%); */
+  border: 6px solid color-mix(in srgb, #ffd534, transparent 80%); 
   transition: 0.3s;
   width: 75%;
   height: 75%;
+  align-items: center;
+  align-content: center;
 }
 
 .visit-us .visit-img:hover {
@@ -1534,8 +1581,7 @@ delivery section
 /* Delivery Banner Styles */
 .delivery-banner {
   position: relative;
-  /* background: url("../img/logo.png") no-repeat center center/cover; */
-  background-color: green;
+  background: url("../img/banner-bg.jpg") no-repeat center center/cover;
   height: 300px; /* Adjust height as needed */
   display: flex;
   align-items: center;
@@ -1555,6 +1601,7 @@ delivery section
 .banner-content h2 {
   font-size: 36px;
   margin: 0 0 10px;
+  color: #FFB534;
 }
 
 .banner-content p {
@@ -1583,13 +1630,13 @@ delivery section
 }
 
 .delivery-link img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   margin-bottom: 10px;
 }
 
 .delivery-link span {
-  font-size: 14px;
+  font-size: 20px;
 }
 @media (max-width: 768px) {
   .delivery-options {
