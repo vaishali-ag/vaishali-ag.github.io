@@ -105,17 +105,24 @@ div.catering-bg{
   background-image: url(../img/menu/Squid\ 65.jpeg) ;
 }
 div.corporate-bg{
-  background-image: url(../img/about-2.jpg) ;
+  background-image: url(../img/menu/Pomfret\ fish\ fry.jpeg) ;
 }
 div.about-bg{
-  background-image: url(../img/about.jpg) ;
+  background-image: url(../img/menu/Pomfret\ fish\ fry.jpeg) ;
 }
 div.menu-bg{
   background-image: url(../img/banner/heading1.jpeg) ;
 }
 
+div.cateringRequest-bg{
+  background-image: url(../img/menu/Paya\ \(Lamb\)\ trotters.jpeg) ;
+}
+
 section.page-heading {
-	padding: 80px 0px;
+	padding: 150px 0px;
+  
+  object-fit: cover;
+  z-index: -1;
 	/* background-image: url(../img/banner/heading1.jpeg) ; */
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1120,7 +1127,7 @@ section,
 }
 
 .section-title p {
-  color: var(--heading-color);
+  color: #587445;
   margin: 10px 0 0 0;
   font-size: 48px;
   font-weight: 500;
@@ -1643,7 +1650,7 @@ delivery section
 .delivery-banner {
   position: relative;
   background: url("../img/banner-bg.jpg") no-repeat center center/cover;
-  height: 300px; /* Adjust height as needed */
+  height: 400px; /* Adjust height as needed */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2340,14 +2347,14 @@ margin-top: 0;
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-item {
-  background-color: var(--surface-color);
+  background-color: #fff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 20px 30px;
 }
 
 .contact .info-item .icon {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
+  color: #ffb534;
+  background-color: #f5a425;
   width: 56px;
   height: 56px;
   font-size: 24px;
@@ -2364,7 +2371,7 @@ margin-top: 0;
   font-weight: 700;
   margin: 0 0 5px 0;
   font-family: var(--default-font);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
 }
 
 .contact .info-item p {
@@ -2379,7 +2386,7 @@ margin-top: 0;
   line-height: 1;
   margin: 4px 6px 0 0;
   transition: 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
 }
 
 .contact .info-item .social-links a:hover {

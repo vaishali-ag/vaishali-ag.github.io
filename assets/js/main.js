@@ -178,7 +178,7 @@
 
     // Start auto-change
     function startAutoChange() {
-      autoChangeInterval = setInterval(autoChange, 3000);
+      autoChangeInterval = setInterval(autoChange, 1000);
     }
 
     // Stop auto-change (useful when manually navigating)
