@@ -2346,21 +2346,50 @@ margin-top: 0;
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.info-item {
+  background: #f2f2f2; 
+  border: 1px solid #059652; 
+  border-radius: 8px; 
+  padding: 20px; 
+  text-align: center; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  height: 200px; 
+  width: 300px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.info-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.info-item p {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Optional: Ensure all columns align in height */
+.row > .col-lg-3, .row > .col-md-6 {
+  display: flex;
+  align-items: stretch; /* Stretch to fill row height */
+}
+
 .contact .info-item {
-  background-color: #fff;
+  background-color: #587445;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 20px 30px;
 }
 
 .contact .info-item .icon {
-  color: #ffb534;
-  background-color: #f5a425;
+  /* color: #ffb534;
+  background-color: #f5a425; */
   width: 56px;
   height: 56px;
   font-size: 24px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
   margin-right: 15px;
@@ -2371,13 +2400,14 @@ margin-top: 0;
   font-weight: 700;
   margin: 0 0 5px 0;
   font-family: var(--default-font);
-  color: color-mix(in srgb, var(--default-color), transparent 10%);
+  color: #ffb534;
 }
 
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
+  color: #fff;
 }
 
 .contact .info-item .social-links a {
@@ -2399,7 +2429,13 @@ margin-top: 0;
   padding: 30px;
   margin-top: 30px;
 }
-
+.contact .php-email-form h1{
+ color:var(--accent-color);
+ font-size: 2rem;
+ text-align: left;
+ padding: 1%;
+ 
+}
 @media (max-width: 575px) {
   .contact .php-email-form {
     padding: 20px;
@@ -2411,7 +2447,7 @@ margin-top: 0;
 .contact .php-email-form textarea {
   color: var(--default-color);
   background-color: color-mix(in srgb, var(--surface-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-color: var(--default-color);
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
@@ -2427,7 +2463,7 @@ margin-top: 0;
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: #666;
 }
 
 .contact .php-email-form button[type=submit] {

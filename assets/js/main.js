@@ -152,6 +152,7 @@
       }
     }
   });
+  
   document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".carousel-slide");
     const indicators = document.querySelectorAll(".carousel-indicators .indicator");
