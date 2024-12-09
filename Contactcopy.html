@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Save Web Form Data to Spreadsheets</title>
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/54kMZYIXirz1pAWB/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+	<form id="myForm">
+		<label>first-name</label>
+		<input name="first-name" />
+		<br/>
+		<label>last-name</label>
+		<input name="last-name" />
+		<br/>
+		<label>email</label>
+		<input name="email" />
+		<br/>
+		<label>phone</label>
+		<input name="phone" />
+		<br/>
+		<label>event-date</label>
+		<input name="event-date" />
+		<br/>
+		<label>attendees</label>
+		<input name="attendees" />
+		<br/>
+		<label>city</label>
+		<input name="city" />
+		<br/>
+		<label>state</label>
+		<input name="state" />
+		<br/>
+		<label>zip</label>
+		<input name="zip" />
+		<br/>
+		<label>mode</label>
+		<input name="mode" />
+		<br/>
+		<label>additional-info</label>
+		<input name="additional-info" />
+		<br/>
+	</form>
+	<button onclick='SubForm()'>Submit</button>
+</body>
+</html>
