@@ -100,36 +100,74 @@ body, html {
 
 div.takeout-bg{
   background-image: url(../img/menu/Fish\ Curry.jpeg) ;
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center center; /* Center the image */
+  min-height: 40vh; /* Full height of the viewport */
+  width: 100%; /* Full width of the container */
+  position: relative; /* Keeps the section in place */  ;
 }
 div.catering-bg{
   background-image: url(../img/menu/Squid\ 65.jpeg) ;
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center center; /* Center the image */
+  min-height: 40vh; /* Full height of the viewport */
+  width: 100%; /* Full width of the container */
+  position: relative; /* Keeps the section in place */  ;
 }
 div.corporate-bg{
   background-image: url(../img/menu/Pomfret\ fish\ fry.jpeg) ;
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center center; /* Center the image */
+  min-height: 40vh; /* Full height of the viewport */
+  width: 100%; /* Full width of the container */
+  position: relative; /* Keeps the section in place */  ;
 }
 div.about-bg{
   background-image: url(../img/menu/Pomfret\ fish\ fry.jpeg) ;
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center center; /* Center the image */
+  min-height: 40vh; /* Full height of the viewport */
+  width: 100%; /* Full width of the container */
+  position: relative; /* Keeps the section in place */  ;
 }
 div.menu-bg{
   background-image: url(../img/banner/heading1.jpeg) ;
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center center; /* Center the image */
+  min-height: 40vh; /* Full height of the viewport */
+  width: 100%; /* Full width of the container */
+  position: relative; /* Keeps the section in place */  ;
 }
 
 div.cateringRequest-bg{
   background-image: url(../img/menu/Paya\ \(Lamb\)\ trotters.jpeg) ;
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center center; /* Center the image */
+  min-height: 40vh; /* Full height of the viewport */
+  width: 100%; /* Full width of the container */
+  position: relative; /* Keeps the section in place */  ;
 }
-
+div.contact-bg{
+  background-image: url(../img/aboutus.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center center; /* Center the image */
+  min-height: 40vh; /* Full height of the viewport */
+  width: 100%; /* Full width of the container */
+  position: relative; /* Keeps the section in place */  ;
+}
 section.page-heading {
-	padding: 150px 0px;
-  
-  object-fit: cover;
-  z-index: -1;
-	/* background-image: url(../img/banner/heading1.jpeg) ; */
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	text-align: center; 
-  height: fit-content;
-
+  padding: 100px 0; /* Adds vertical spacing for content */
+  position: relative; /* Allows for layering */
+  text-align: center; /* Centers the text */
+  z-index: 1; /* Ensures content stays above the background */
+  color: white;
 }
 
 
@@ -138,9 +176,9 @@ section.page-heading {
   margin-bottom: 20px;
   font-family:cursive ;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  color: #c71f2c;
+  color: #587445;
 
   background: rgba(222, 220, 220, 0.5); 
   /* border: 2px solid #059652;  */
