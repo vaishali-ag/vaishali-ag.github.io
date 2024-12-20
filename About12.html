@@ -1,256 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Starter Page - Yummy Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrollable Menu</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    .menu-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      max-height: 100vh;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #fff;
+    }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    /* Navigation Tabs */
+    .menu-tabs {
+      flex-shrink: 0;
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      background-color: #f1f1f1;
+      border-bottom: 1px solid #ddd;
+    }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    .menu-tabs a {
+      flex: 0 0 auto;
+      text-align: center;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+      border-right: 1px solid #ddd;
+      transition: background-color 0.3s;
+    }
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    .menu-tabs a:last-child {
+      border-right: none;
+    }
 
-  <!-- =======================================================
-  * Template Name: Yummy
-  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    .menu-tabs a.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .menu-tabs a:hover {
+      background-color: #e9ecef;
+    }
+
+    /* Scrollable Menu Content */
+    .menu-content {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .menu-section {
+      margin-bottom: 30px;
+    }
+
+    .menu-section h5 {
+      font-size: 1.25rem;
+      color: #333;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #007bff;
+      display: inline-block;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .menu-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 15px;
+    }
+
+    .menu-item-details {
+      flex-grow: 1;
+    }
+
+    .menu-item-title {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .menu-item-description {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .menu-item-price {
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .menu-item img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .menu-item-title {
+        font-size: 0.95rem;
+      }
+
+      .menu-item-description {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
 </head>
-
-<body class="starter-page-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    
-
-    <img src="assets/img/logo.png" height="200px" width="200px" class="text-center">
-  
-    <div class="container position-relative d-flex align-items-center justify-content-between">
-
-      <a href="starter-page.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-      <!-- <h1 class="sitename">Yummy</h1> -->
-        <!-- <span>.</span> -->
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home<br></a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="Menu.html">Menu</a></li>
-          <li><a href="Catering.html">Catering</a></li>
-          <li><a href="Corporate.html">Corporates</a></li>
-          <li><a href="Takeout.html">Take Out</a></li>          
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="index.html#book-a-table">Book a Table</a>
-
+<body>
+  <div class="menu-container">
+    <!-- Navigation Tabs -->
+    <div class="menu-tabs">
+      <a href="#veggie" class="active" onclick="switchMenu(event, 'veggie')">Appetizers for Veggie Lovers</a>
+      <a href="#meat" onclick="switchMenu(event, 'meat')">Appetizers for Meat Lovers</a>
+      <a href="#lunch" onclick="switchMenu(event, 'lunch')">Weekday Lunch Menu</a>
+      <a href="#veg-curries" onclick="switchMenu(event, 'veg-curries')">Veg Curries</a>
+      <a href="#non-veg" onclick="switchMenu(event, 'non-veg')">Non-Vegetarian Entrees</a>
+      <a href="#dosa" onclick="switchMenu(event, 'dosa')">Dosa Lovers</a>
+      <a href="#legacy" onclick="switchMenu(event, 'legacy')">Shree's Legacy Items</a>
+      <a href="#bread" onclick="switchMenu(event, 'bread')">Bread</a>
+      <a href="#desserts" onclick="switchMenu(event, 'desserts')">Desserts</a>
     </div>
-  </header>
-  
-  <main class="main">
- 
 
-<!-- About Section -->
-    <section id="about" class="about section">
-      <div class="background-section">
-
-        <div class="content">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h3>About Us</h3>
-        <p class="fst-italic">
-         The Story Behind
-        </p>
-       
-        <p>
-        <div class="row gy-4">
-          <div class="col-lg-6 order-1 order-lg-2">
-            <img src="assets/img/about.jpg" class="img-fluid about-img" alt="">
-          </div>
-          <div class="col-lg-6 order-2 order-lg-1 content">
-           
-             
-Kaaraikudi Restaurant established in the year 1980 on Dr.Radhakrishnan Salai proudly boasts serving authentic chettinad food in traditional way ever since. A southern atmosphere has been created inside the restaurant with artifacts from that region, having a seating capacity of 80 covers, which are neatly arranged in a 2000sft of pleasing ambiance. 
-Chettinad cuisine is characterized by liberal use of spices having generous amount of pepper, cinnamon, bay leaves, nutmeg, green & red chillies etc; considered to be one of the oiliest & aromatic cuisine in India. The cuisine offers a variety of Vegetarian & non – vegetarian dishes which are spicy & unique in taste.
-Some of the non – vegetarian dishes include special chettinad chicken 65 ( with bone ), chicken pepper roast, Vanjaram fish fry, mutton kola uraundai, egg masala etc; Weekend specialities like Mutton Thalakari, Mutton Liver fry & much more to discover from the list of typical Chettinad preparations. Some of the popular vegetarian dishes include vazhaipoo vadai, Baby corn Varuval, chilli mushroom, pakoda kuzhambu,vada curry. Most of the dishes are eaten with rice & rice based accompaniments such as dosas, appam, idiyappam & idili. 
-You can indulge in Kaaraikudi Chettinad meals served with rice, sambar, fish gravy,chicken gravy, appalam, keerai, kootu, curry leaf powder, gingely oil, sweet & banana etc; that takes your palate on a guided creative journey to enjoy your meal. 
-The traditional ambience alongside the melodious old songs from the famous tamil movies will take you to the period. 
-Come, dine in for the best chettinad experience you have ever had.
-
-            </p>
+    <!-- Scrollable Menu Content -->
+    <div class="menu-content" id="menu-content">
+      <div id="veggie" class="menu-section">
+        <h5>Appetizers for Veggie Lovers</h5>
+        <div class="menu-item">
+          <img src="https://via.placeholder.com/80" alt="Samosa">
+          <div class="menu-item-details">
+            <div class="menu-item-title">Samosa</div>
+            <div class="menu-item-description">Pastry with a savory filling, mostly vegetables, spiced potatoes, onions, and peas.</div>
+            <div class="menu-item-price">$5.00</div>
           </div>
         </div>
-
       </div>
 
-    <!-- </section>
+      <div id="meat" class="menu-section" style="display: none;">
+        <h5>Appetizers for Meat Lovers</h5>
+        <!-- Content -->
+      </div>
 
-    <section id="visit-us" class="visit-us section"> -->
+      <div id="lunch" class="menu-section" style="display: none;">
+        <h5>Weekday Lunch Menu</h5>
+        <!-- Content -->
+      </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <br>
-        <h2>Right Here Waiting</h2>
-        <h3>Visit Our Restaurant</h3>
-      </div><!-- End Section Title -->
+      <div id="veg-curries" class="menu-section" style="display: none;">
+        <h5>Veg Curries</h5>
+        <!-- Content -->
+      </div>
 
-      <div class="container">
+      <div id="non-veg" class="menu-section" style="display: none;">
+        <h5>Non-Vegetarian Entrees</h5>
+        <!-- Content -->
+      </div>
 
+      <div id="dosa" class="menu-section" style="display: none;">
+        <h5>Dosa Lovers</h5>
+        <!-- Content -->
+      </div>
 
-        <div >
+      <div id="legacy" class="menu-section" style="display: none;">
+        <h5>Shree's Legacy Items</h5>
+        <!-- Content -->
+      </div>
 
-          
+      <div id="bread" class="menu-section" style="display: none;">
+        <h5>Bread</h5>
+        <!-- Content -->
+      </div>
 
-          <div  data-aos="fade-up" data-aos-delay="200">
-            <div class="card-item">
-           
-              <!-- <p>We see our customers as invited guests to a party, and we are the hosts.</p>
-              <span>Get Direction</span>
-              <h4><a href="" class="stretched-link">delhi</a></h4> -->
-
-  <p>
-        <div class="row gy-4">
-          <div class="col-lg-6 order-1 order-lg-2">
-            <img src="assets/img/about.jpg" class="img-fluid visit-img" alt="">
-          </div>
-          <div class="col-lg-6 order-2 order-lg-1 content">
-            <p>We see our customers as invited guests to a party, and we are the hosts.</p>
-            <span>Get Direction</span>
-            <h4><a href="" class="stretched-link"> <div class="container">
-              <div class="row gy-4">
-                <div class="col-lg-6 col-md-6 d-flex">
-                  <i class="bi bi-geo-alt icon"></i>
-                  <div class="address">
-          
-                    <p>A108 Adam Street</p>
-                    <p>New York, NY 535022</p>
-                    <p></p>
-                  </div>
-        
-                </div></a></h4>
-
-
-            </p>
-            </div>
-          </div><!-- Card Item -->
-
-        
-
-        </div>
-        
-
-        </div>
-
-      </div>  </div>
-    </div>
-
-    </section><!-- /visit Us Section -->
-
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-
-    <div class="container">
-      <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-geo-alt icon"></i>
-          <div class="address">
-            <h4>Address</h4>
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p></p>
-          </div>
-
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-telephone icon"></i>
-          <div>
-            <h4>Contact</h4>
-            <p>
-              <strong>Phone:</strong> <span>+1 5589 55488 55</span><br>
-              <strong>Email:</strong> <span>info@example.com</span><br>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Opening Hours</h4>
-            <p>
-              <strong>Mon-Sat:</strong> <span>11AM - 23PM</span><br>
-              <strong>Sunday</strong>: <span>Closed</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <h4>Follow Us</h4>
-          <div class="social-links d-flex">
-            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
+      <div id="desserts" class="menu-section" style="display: none;">
+        <h5>Desserts</h5>
+        <!-- Content -->
       </div>
     </div>
+  </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Yummy</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
+  <script>
+    function switchMenu(event, sectionId) {
+      event.preventDefault();
+      document.querySelectorAll('.menu-section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(sectionId).style.display = 'block';
 
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+      document.querySelectorAll('.menu-tabs a').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      event.target.classList.add('active');
+    }
+  </script>
 </body>
-
 </html>
+
+
+
+
+
+ ]Rasam Soup
+    Tomato Soup 
+   Chicken Noodle Soup 
+    
+ 

@@ -204,6 +204,8 @@ section.page-heading {
     padding: 40px;
     color: black;
     text-align: center;
+    height: 100%;
+   margin: 0em;
   
 }
 .content {
@@ -215,6 +217,7 @@ section.page-heading {
   max-width: 1200px;
   margin: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+ 
 }
 
 
@@ -482,6 +485,8 @@ background-color: #e3ddcc;
   width: 100%;
   height: 50vh;
   overflow: hidden;
+  height: 100%;
+  margin: 0em;
 }
 
 #bg-video {
@@ -506,6 +511,8 @@ background-color: #e3ddcc;
   display: flex;
   align-items: center; 
   justify-content: center;
+  height: 100%;
+  margin: 0em;
 }
 
 /* Responsive Grid Layout */
@@ -517,6 +524,9 @@ background-color: #e3ddcc;
   width: 100%; 
   align-items: center;
   justify-items: center;
+  height: 100%;
+   margin: 0em;
+   overflow-y: auto;
 }
 
 /* Icon Box Styling */
@@ -1677,7 +1687,7 @@ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   .delivery-options {
     flex-direction: column;
   }
-
+  
 }
 
 
@@ -1748,10 +1758,14 @@ delivery section
   .delivery-options {
     flex-direction: column;
   }
-
+  
   .delivery-link img {
     width: 50px;
     height: 50px;
+
+  }
+  .delivery-banner{
+    height: auto;
   }
 }
 
@@ -2614,5 +2628,207 @@ margin-top: 0;
 @media (max-width: 768px) {
   .form-row {
     flex-direction: column;
+  }
+}
+/* 
+.menu-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+
+}
+
+.menu-header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.menu-header .controls {
+  display: flex;
+  gap: 10px;
+}
+
+.menu-header input[type="text"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.menu-header select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.menu-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.menu-table th, .menu-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-table th {
+  background-color: #f4f4f4;
+  font-weight: 500;
+}
+
+.menu-table img {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+}
+.dish-Name{
+color: #c71f2c;
+}
+.dish-dis{
+  color: #666;
+} */
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-height: 100vh;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Scrollable Navigation Tabs */
+.menu-tabs {
+  flex-shrink: 0;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ddd;
+  scrollbar-width: thin; /* Firefox */
+}
+
+.menu-tabs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.menu-tabs::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 4px;
+}
+
+.menu-tabs::-webkit-scrollbar-track {
+  background: #e9ecef;
+}
+
+.menu-tabs a {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  border-right: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+.menu-tabs a:last-child {
+  border-right: none;
+}
+
+.menu-tabs a.active {
+  background-color: #587445;
+  color: white;
+}
+
+.menu-tabs a:hover {
+  background-color: #587445;
+}
+
+/* Scrollable Menu Content */
+.menu-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.menu-section {
+  margin-bottom: 30px;
+}
+
+.menu-section h5 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #587445;
+  display: inline-block;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.menu-item-details {
+  flex-grow: 1;
+}
+
+.menu-item-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.menu-item-description {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.menu-item-price {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .menu-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu-item-title {
+    font-size: 0.95rem;
+  }
+
+  .menu-item-description {
+    font-size: 0.8rem;
   }
 }
