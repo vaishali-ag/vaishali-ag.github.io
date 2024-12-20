@@ -2805,7 +2805,7 @@ color: #c71f2c;
 }
 
 .menu-item-details {
-  flex-grow: 1;
+  flex-grow: .01;
 }
 
 .menu-item-title {
@@ -2814,7 +2814,7 @@ color: #c71f2c;
 }
 
 .menu-item-description {
-  color: #666;
+  color: #e3ddcc;
   font-size: 0.9rem;
 }
 
