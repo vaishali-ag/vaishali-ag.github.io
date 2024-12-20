@@ -106,6 +106,10 @@ div.takeout-bg{
   min-height: 40vh; /* Full height of the viewport */
   width: 100%; /* Full width of the container */
   position: relative; /* Keeps the section in place */  ;
+
+  border-bottom:2px solid #ffb534;
+
+  /* border-radius: 1%; */
 }
 div.catering-bg{
   background-image: url(../img/menu/Squid\ 65.jpeg) ;
@@ -115,6 +119,8 @@ div.catering-bg{
   min-height: 40vh; /* Full height of the viewport */
   width: 100%; /* Full width of the container */
   position: relative; /* Keeps the section in place */  ;
+  border-bottom:2px solid #ffb534;
+
 }
 div.corporate-bg{
   background-image: url(../img/menu/Pomfret\ fish\ fry.jpeg) ;
@@ -124,6 +130,8 @@ div.corporate-bg{
   min-height: 40vh; /* Full height of the viewport */
   width: 100%; /* Full width of the container */
   position: relative; /* Keeps the section in place */  ;
+  border-bottom:2px solid  #ffb534;
+
 }
 div.about-bg{
   background-image: url(../img/menu/Pomfret\ fish\ fry.jpeg) ;
@@ -133,6 +141,8 @@ div.about-bg{
   min-height: 40vh; /* Full height of the viewport */
   width: 100%; /* Full width of the container */
   position: relative; /* Keeps the section in place */  ;
+  border-bottom:2px solid  #ffb534;
+
 }
 div.menu-bg{
   background-image: url(../img/banner/heading1.jpeg) ;
@@ -142,6 +152,8 @@ div.menu-bg{
   min-height: 40vh; /* Full height of the viewport */
   width: 100%; /* Full width of the container */
   position: relative; /* Keeps the section in place */  ;
+  border-bottom:2px solid  #ffb534;
+
 }
 
 div.cateringRequest-bg{
@@ -152,6 +164,8 @@ div.cateringRequest-bg{
   min-height: 40vh; /* Full height of the viewport */
   width: 100%; /* Full width of the container */
   position: relative; /* Keeps the section in place */  ;
+  border-bottom:2px solid  #ffb534;
+
 }
 div.contact-bg{
   background-image: url(../img/aboutus.jpeg);
@@ -161,6 +175,8 @@ div.contact-bg{
   min-height: 40vh; /* Full height of the viewport */
   width: 100%; /* Full width of the container */
   position: relative; /* Keeps the section in place */  ;
+  border-bottom:2px solid  #ffb534;
+
 }
 section.page-heading {
   padding: 100px 0; /* Adds vertical spacing for content */
