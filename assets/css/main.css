@@ -1658,7 +1658,8 @@ about us
   display: flex;
   color: #fff;
   border-radius: 10px;
-
+  height: 100%;
+   margin: 0em;
 }
 
 .about-content {
@@ -1666,6 +1667,8 @@ about us
   /* background: rgba(222, 220, 220, 0.9);  */
   padding: 20px;
   border-radius: 10px;
+  height: 100%;
+  margin: 0em;
 }
 
 .about-content h2 {
@@ -1677,8 +1680,11 @@ about us
 .about-content p {
   font-size: 22px;
   margin-bottom: 20px;
-color: black;
-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+color: #587445;
+height: 100%;
+   margin: 0em;
+   overflow-y: auto;
+/* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 
 
 }
