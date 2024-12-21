@@ -2838,6 +2838,16 @@ color: #c71f2c;
   font-weight: bold;
   color: #333;
 }
+.search-bar {
+  position: relative;
+}
+
+.search-bar input {
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

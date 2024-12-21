@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scrollable Menu</title>
+  <title>Scrollable Menu with Search Bar</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
   <style>
     body {
@@ -25,18 +25,17 @@
 
     /* Navigation Tabs */
     .menu-tabs {
-      flex-shrink: 0;
       display: flex;
-      overflow-x: auto;
-      white-space: nowrap;
+      align-items: center;
       background-color: #f1f1f1;
       border-bottom: 1px solid #ddd;
+      padding: 10px;
     }
 
     .menu-tabs a {
-      flex: 0 0 auto;
+      flex: 1;
       text-align: center;
-      padding: 10px 15px;
+      padding: 10px;
       text-decoration: none;
       color: #555;
       font-weight: bold;
@@ -55,6 +54,19 @@
 
     .menu-tabs a:hover {
       background-color: #e9ecef;
+    }
+
+    /* Search Bar */
+    .search-bar {
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+
+    .search-bar input {
+      width: 250px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
     }
 
     /* Scrollable Menu Content */
@@ -130,71 +142,58 @@
 </head>
 <body>
   <div class="menu-container">
-    <!-- Navigation Tabs -->
+    <!-- Navigation Tabs with Search Bar -->
     <div class="menu-tabs">
-      <a href="#veggie" class="active" onclick="switchMenu(event, 'veggie')">Appetizers for Veggie Lovers</a>
-      <a href="#meat" onclick="switchMenu(event, 'meat')">Appetizers for Meat Lovers</a>
-      <a href="#lunch" onclick="switchMenu(event, 'lunch')">Weekday Lunch Menu</a>
-      <a href="#veg-curries" onclick="switchMenu(event, 'veg-curries')">Veg Curries</a>
-      <a href="#non-veg" onclick="switchMenu(event, 'non-veg')">Non-Vegetarian Entrees</a>
-      <a href="#dosa" onclick="switchMenu(event, 'dosa')">Dosa Lovers</a>
-      <a href="#legacy" onclick="switchMenu(event, 'legacy')">Shree's Legacy Items</a>
-      <a href="#bread" onclick="switchMenu(event, 'bread')">Bread</a>
-      <a href="#desserts" onclick="switchMenu(event, 'desserts')">Desserts</a>
+      <a href="#veggie" class="active" onclick="switchMenu(event, 'veggie')">Veggie Lovers</a>
+      <a href="#meat" onclick="switchMenu(event, 'meat')">Meat Lovers</a>
+      <a href="#lunch" onclick="switchMenu(event, 'lunch')">Lunch Menu</a>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search menu..." oninput="filterMenu()">
+      </div>
     </div>
 
     <!-- Scrollable Menu Content -->
     <div class="menu-content" id="menu-content">
+      <!-- Veggie Section -->
       <div id="veggie" class="menu-section">
-        <h5>Appetizers for Veggie Lovers</h5>
+        <h5>Veggie Lovers</h5>
         <div class="menu-item">
           <img src="https://via.placeholder.com/80" alt="Samosa">
           <div class="menu-item-details">
             <div class="menu-item-title">Samosa</div>
-            <div class="menu-item-description">Pastry with a savory filling, mostly vegetables, spiced potatoes, onions, and peas.</div>
+            <div class="menu-item-description">Pastry with savory vegetables, spiced potatoes, onions, and peas.</div>
             <div class="menu-item-price">$5.00</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://via.placeholder.com/80" alt="Paneer Pakora">
+          <div class="menu-item-details">
+            <div class="menu-item-title">Paneer Pakora</div>
+            <div class="menu-item-description">Crispy fried cottage cheese fritters.</div>
+            <div class="menu-item-price">$9.99</div>
           </div>
         </div>
       </div>
 
+      <!-- Meat Section -->
       <div id="meat" class="menu-section" style="display: none;">
-        <h5>Appetizers for Meat Lovers</h5>
-        <!-- Content -->
-      </div>
-
-      <div id="lunch" class="menu-section" style="display: none;">
-        <h5>Weekday Lunch Menu</h5>
-        <!-- Content -->
-      </div>
-
-      <div id="veg-curries" class="menu-section" style="display: none;">
-        <h5>Veg Curries</h5>
-        <!-- Content -->
-      </div>
-
-      <div id="non-veg" class="menu-section" style="display: none;">
-        <h5>Non-Vegetarian Entrees</h5>
-        <!-- Content -->
-      </div>
-
-      <div id="dosa" class="menu-section" style="display: none;">
-        <h5>Dosa Lovers</h5>
-        <!-- Content -->
-      </div>
-
-      <div id="legacy" class="menu-section" style="display: none;">
-        <h5>Shree's Legacy Items</h5>
-        <!-- Content -->
-      </div>
-
-      <div id="bread" class="menu-section" style="display: none;">
-        <h5>Bread</h5>
-        <!-- Content -->
-      </div>
-
-      <div id="desserts" class="menu-section" style="display: none;">
-        <h5>Desserts</h5>
-        <!-- Content -->
+        <h5>Meat Lovers</h5>
+        <div class="menu-item">
+          <img src="https://via.placeholder.com/80" alt="Chicken Tikka">
+          <div class="menu-item-details">
+            <div class="menu-item-title">Chicken Tikka</div>
+            <div class="menu-item-description">Grilled chicken marinated in spices and yogurt.</div>
+            <div class="menu-item-price">$12.00</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://via.placeholder.com/80" alt="Lamb Kebab">
+          <div class="menu-item-details">
+            <div class="menu-item-title">Lamb Kebab</div>
+            <div class="menu-item-description">Tender and juicy minced lamb kebabs.</div>
+            <div class="menu-item-price">$14.50</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -212,16 +211,22 @@
       });
       event.target.classList.add('active');
     }
+
+    function filterMenu() {
+      const searchInput = document.getElementById('search-input').value.toLowerCase();
+      const menuItems = document.querySelectorAll('.menu-item');
+
+      menuItems.forEach(item => {
+        const title = item.querySelector('.menu-item-title').textContent.toLowerCase();
+        const description = item.querySelector('.menu-item-description').textContent.toLowerCase();
+
+        if (title.includes(searchInput) || description.includes(searchInput)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
   </script>
 </body>
 </html>
-
-
-
-
-
- ]Rasam Soup
-    Tomato Soup 
-   Chicken Noodle Soup 
-    
- 

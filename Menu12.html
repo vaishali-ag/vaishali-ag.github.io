@@ -28,74 +28,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
-<style>
-  .menu-container {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-.menu-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.menu-header h1 {
-  font-size: 2rem;
-  color: #333;
-}
-
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.menu-item {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.menu-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu-item img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.menu-item-content {
-  padding: 15px;
-  text-align: center;
-}
-
-.menu-item-content h3 {
-  font-size: 1.25rem;
-  margin: 0;
-  color: #333;
-}
-
-.menu-item-content p {
-  margin: 8px 0 0;
-  color: #666;
-}
-
-.menu-item-content .price {
-  margin-top: 10px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #000;
-}
-</style>
   <!-- =======================================================
   * Template Name: Yummy
   * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
@@ -165,429 +98,190 @@
 
     <div class="background-section">
       <div class="content">
-  <section class="menu section" id="menu-section ">
-    <div class="menu-container">
-      <div class="menu-header">
-        <h1>Menu</h1>
-        <div class="controls">
-          <input type="text" id="search" placeholder="Search menu items..." oninput="filterMenu()">
-          <select id="filter" onchange="filterMenu()">
-            <option value="all">All</option>
-            <option value="Vegetarian Appetizers">Vegetarian Appetizers</option>
-            <option value="Non-Veg Appetizers">Non-Veg Appetizers</option>
-            <option value="Quick Lunch Menu">Quick Lunch Menu</option>
 
-            <option value="Soups">Soups</option>
-            <option value="Vegetarian Entrees">Vegetarian Entrees</option>
-            <option value="Non-Vegetarian Entrees">Non-Vegetarian Entrees</option>
-            <option value="Breads">Breads</option>
-            <option value="Dosa">Dosa</option>
-            <option value="Beverages">Beverages</option>
-            <option value="Rice">Rice</option>
-            <option value="Desserts">Desserts</option>
 
-            <option value="Shri All Time Signature">Shri All Time Signature</option>
-            <option value="Indo-Chinese">Indo-Chinese</option>
-            <option value="Wine & Beer">Wine & Beer</option>
-            <option value="Buffet Weekend">Buffet Weekend</option>
-            <option value="Kids Menu">Kids Menu</option>
-            <option value="Chinese">Chinese</option>
-            <option value="Vegan">Vegan</option>
-            <option value="Desserts">Desserts</option>
+      
 
-            <option value="Family Pack">Family Biryani</option>
-            <option value="Biryani">Biryani</option>
-            <option value="Thali">Thali</option>
-            <option value="Fountain Drinks">Fountain Drinks</option>
-          </select>
-        </div>
-      </div>
-  
-   
-    </div>
-   
-      <div class="menu-grid" >
-       
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Samosa">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Samosa">
-          <div class="menu-item-content">
-            <h3>Samosa</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
+
+        <div class="menu-container">
+          <!-- Navigation Tabs -->
+          <div class="menu-tabs">
+            <div class="search-bar ms-3">
+              <input type="text" id="search-input" placeholder="Search menu..." oninput="filterMenu()">
+            </div>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            <a href="#veggie" class="active" onclick="switchMenu(event, 'veggie')">Appetizers for Veggie Lovers</a>
+            <a href="#meat" onclick="switchMenu(event, 'meat')">Non-Veg Appetizers</a>
+            <a href="#lunch" onclick="switchMenu(event, 'lunch')">Weekday Lunch Menu</a>
+            <a href="#soups" onclick="switchMenu(event, 'soups')">Soups</a>
+      
+            <a href="#veg-curries" onclick="switchMenu(event, 'veg-curries')">Veg Curries</a>
+            <a href="#non-veg" onclick="switchMenu(event, 'non-veg')">Non-Vegetarian Entrees</a>
+            <a href="#dosa" onclick="switchMenu(event, 'dosa')">Dosa Lovers</a>
+            <a href="#beverages" onclick="switchMenu(event, 'beverages')">Beverages</a>
+            <a href="#rice" onclick="switchMenu(event, 'rice')">Rice</a>
+      
+            <a href="#legacy" onclick="switchMenu(event, 'legacy')">Shree's Legacy Items</a>
+            <a href="#bread" onclick="switchMenu(event, 'bread')">Bread</a>
+            <a href="#Thali" onclick="switchMenu(event, 'Thali')">Thali</a>
+            <a href="#Biryani" onclick="switchMenu(event, 'Biryani')">Biryani</a>
+
+            <a href="#Chinese" onclick="switchMenu(event, 'Chinese')">Chinese</a>
+            <a href="#Vegan" onclick="switchMenu(event, 'Vegan')">Vegan</a>
+           
+            <a href="#Indo-Chinese" onclick="switchMenu(event, 'Indo-Chinese')">Indo-Chinese</a>
+      
+            <a href="#Buffet" onclick="switchMenu(event, 'Buffet')">Buffet Weekend</a>
+            
+            <a href="#Family" onclick="switchMenu(event, 'Family')">Family</a>
+            <a href="#Kids" onclick="switchMenu(event, 'Kids')">Kids</a>
+            <a href="#Fountain-Drinks" onclick="switchMenu(event, 'Fountain-Drinks')">Fountain Drinks</a>
+
+            <a href="#drinks" onclick="switchMenu(event, 'drinks')">Wine & Beer</a>
+
+            <a href="#desserts" onclick="switchMenu(event, 'desserts')">Desserts</a>
+
+          
           </div>
-        </div>
-
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Paneer Pakora">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Paneer Pakora">
-          <div class="menu-item-content">
-            <h3>Paneer Pakora</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-        </div>
+      
+          
+          <!-- https://via.placeholder.com/80 -->
+          <!-- Scrollable Menu Content -->
+          <div class="menu-content" id="menu-content">
+            <div id="veggie" class="menu-section">
+              <h5>Appetizers for Veggie Lovers</h5>
+              <div class="menu-item">
+                <img src="assets/img/menu/samosa.jpeg" alt="Samosa">
+                <div class="menu-item-details">
+                  <div class="menu-item-title">Samosa</div>
+                  <!-- <div class="menu-item-description">Pastry with a savory filling, mostly vegetables, spiced potatoes, onions, and peas.</div> -->
+                  <!-- <div class="menu-item-price">$5.00</div> -->
+                </div>
+              </div>
+      
+              <div class="menu-item">
+                <img src="assets/img/menu/paneer pakora.jpg" alt="paneer pakora">
+                <div class="menu-item-details">
+                  <div class="menu-item-title">Paneer Pakora</div>
+                  <!-- <div class="menu-item-description">Pastry with a savory filling, mostly vegetables, spiced potatoes, onions, and peas.</div>
+                  <div class="menu-item-price">$5.00</div> -->
+                </div>
+              </div>
+              </div>
+      
+               
+      
+             
+               
+                
+      
+      
+      
         
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Chef's Mix Platter">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Chef's Mix Platter">
-          <div class="menu-item-content">
-            <h3>Chef's Mix Platter</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-          </div>
-          <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Vegetable Cutlet">
-            <img src="assets/img/menu/Fish Curry.jpeg" alt="Chef's Mix Platter">
-            <div class="menu-item-content">
-              <h3>Vegetable Cutlet</h3>
-              <p>Variety of Indian dishes</p>
-              <!-- <p class="price">$16.99</p> -->
+          
+      
+           
+      
+            <div id="desserts" class="menu-section" style="display: none;">
+              <h5>Desserts</h5>
+              <!-- Content -->
+              <div class="menu-item">
+                <img src="https://via.placeholder.com/80" alt=" Carrot Halwa">
+                <div class="menu-item-details">
+                      <div class="menu-item-title"> Carrot Halwa</div>
+                  <!-- <div class="menu-item-description">Pastry with a savory filling, mostly vegetables, spiced potatoes, onions, and peas.</div>
+                  <div class="menu-item-price">$5.00</div> -->
+                </div>
+              </div> 
+              <div class="menu-item">
+                <img src="https://via.placeholder.com/80" alt="Rasmalai">
+                <div class="menu-item-details">
+                      <div class="menu-item-title">Rasmalai</div>
+                  <!-- <div class="menu-item-description">Pastry with a savory filling, mostly vegetables, spiced potatoes, onions, and peas.</div>
+                  <div class="menu-item-price">$5.00</div> -->
+                </div>
+              </div> 
+              <div class="menu-item">
+                <img src="https://via.placeholder.com/80" alt="Pista Kulfi">
+                <div class="menu-item-details">
+                      <div class="menu-item-title">Pista Kulfi</div>
+                  <!-- <div class="menu-item-description">Pastry with a savory filling, mostly vegetables, spiced potatoes, onions, and peas.</div>
+                  <div class="menu-item-price">$5.00</div> -->
+                </div>
+              </div> 
+              <div class="menu-item">
+                <img src="https://via.placeholder.com/80" alt="Malai Kulfi">
+                <div class="menu-item-details">
+                      <div class="menu-item-title">Malai Kulfi</div>
+                  <!-- <div class="menu-item-description">Pastry with a savory filling, mostly vegetables, spiced potatoes, onions, and peas.</div>
+                  <div class="menu-item-price">$5.00</div> -->
+                </div>
+              </div> 
+              <div class="menu-item">
+                <img src="https://via.placeholder.com/80" alt="Mango Kulfi">
+                <div class="menu-item-details">
+                      <div class="menu-item-title">Mango Kulfi</div>
+                  <!-- <div class="menu-item-description">Pastry with a savory filling, mostly vegetables, spiced potatoes, onions, and peas.</div>
+                  <div class="menu-item-price">$5.00</div> -->
+                </div>
+              </div> 
+              <div class="menu-item">
+                <img src="https://via.placeholder.com/80" alt=" Moong Dal Halwa">
+                <div class="menu-item-details">
+                      <div class="menu-item-title"> Moong Dal Halwa</div>
+                  <!-- <div class="menu-item-description">Pastry with a savory filling, mostly vegetables, spiced potatoes, onions, and peas.</div>
+                  <div class="menu-item-price">$5.00</div> -->
+                </div>
+              </div> 
+              <div class="menu-item">
+                <img src="https://via.placeholder.com/80" alt="Pan">
+                <div class="menu-item-details">
+                      <div class="menu-item-title"> Pan</div>
+                  <!-- <div class="menu-item-description">Pastry with a savory filling, mostly vegetables, spiced potatoes, onions, and peas.</div>
+                  <div class="menu-item-price">$5.00</div> -->
+                </div>
+              </div> 
+             
             </div>
+      
+      
+          </div>
         </div>
+      
+        <script>
+         function filterMenu() {
+  const searchInput = document.getElementById('search-input').value.toLowerCase();
+  const menuSections = document.querySelectorAll('.menu-section');
 
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Kanchipuram Idly">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Kanchipuram Idlyr">
-          <div class="menu-item-content">
-            <h3>Kanchipuram Idly</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-          </div>
-          <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Idly (3-pieces)">
-            <img src="assets/img/menu/Fish Curry.jpeg" alt="Idly (3-pieces)">
-            <div class="menu-item-content">
-              <h3>Idly (3-pieces)</h3>
-              <p>Variety of Indian dishes</p>
-              <!-- <p class="price">$16.99</p> -->
-            </div>
-        </div>
-       
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Medhu Vada">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Medhu Vada">
-          <div class="menu-item-content">
-            <h3>Medhu Vada</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-          </div>
-          <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Rasam Vada">
-            <img src="assets/img/menu/Fish Curry.jpeg" alt="Rasam Vada">
-            <div class="menu-item-content">
-              <h3>Rasam Vada</h3>
-              <p>Variety of Indian dishes</p>
-              <!-- <p class="price">$16.99</p> -->
-            </div>
-        </div>
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Upma">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Upma">
-          <div class="menu-item-content">
-            <h3>Upma</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-        </div>
+  menuSections.forEach(section => {
+    const menuItems = section.querySelectorAll('.menu-item');
+    let hasVisibleItems = false;
 
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Potato Bhajji">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Potato Bhajji">
-          <div class="menu-item-content">
-            <h3>Potato Bhajji</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-        </div>
+    menuItems.forEach(item => {
+      const title = item.querySelector('.menu-item-title').textContent.toLowerCase();
+      const descriptionElement = item.querySelector('.menu-item-description');
+      const description = descriptionElement ? descriptionElement.textContent.toLowerCase() : '';
+
+      if (title.includes(searchInput) || description.includes(searchInput)) {
+        item.style.display = '';
+        hasVisibleItems = true;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    // Show or hide the section based on whether it has visible items
+    section.style.display = hasVisibleItems ? '' : 'none';
+  });
+}
+
+        </script>
+      
         
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Soya Malai Chops">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Soya Malai Chops">
-          <div class="menu-item-content">
-            <h3>Soya Malai Chops</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-          </div>
-          <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Samosa Chaatt">
-            <img src="assets/img/menu/Fish Curry.jpeg" alt="Samosa Chaat">
-            <div class="menu-item-content">
-              <h3>Samosa Chaat</h3>
-              <p>Variety of Indian dishes</p>
-              <!-- <p class="price">$16.99</p> -->
-            </div>
-        </div>
-       
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Papdi Chaat">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Papdi Chaat">
-          <div class="menu-item-content">
-            <h3> Papdi Chaat</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-        </div>
-
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Soya Tandoori Tikka">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Soya Tandoori Tikka">
-          <div class="menu-item-content">
-            <h3>Soya Tandoori Tikka</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-        </div>
-        
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Paneer Tikka">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Paneer Tikka">
-          <div class="menu-item-content">
-            <h3>Paneer Tikka</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-          </div>
-          <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Aloo Bonda">
-            <img src="assets/img/menu/Fish Curry.jpeg" alt="Aloo Bonda">
-            <div class="menu-item-content">
-              <h3>Aloo Bonda</h3>
-              <p>Variety of Indian dishes</p>
-              <!-- <p class="price">$16.99</p> -->
-            </div>
-        </div>
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Pav Bhaji">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Pav Bhaji">
-          <div class="menu-item-content">
-            <h3>Pav Bhaji</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-          </div>
-          <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Dahi Vada">
-            <img src="assets/img/menu/Fish Curry.jpeg" alt="Dahi Vada">
-            <div class="menu-item-content">
-              <h3>Dahi Vada</h3>
-              <p>Variety of Indian dishes</p>
-              <!-- <p class="price">$16.99</p> -->
-            </div>
-        </div>
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Idly/Vada Combo (2 iddlies & 1 Vada with Sambhar & Chutney)">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Idly/Vada Combo (2 iddlies & 1 Vada with Sambhar & Chutney)">
-          <div class="menu-item-content">
-            <h3>Idly/Vada Combo (2 iddlies & 1 Vada with Sambhar & Chutney)</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-          </div>
-          <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Mini Idlies w/Sambhar (Qty:12)">
-            <img src="assets/img/menu/Fish Curry.jpeg" alt="Mini Idlies w/Sambhar (Qty:12)">
-            <div class="menu-item-content">
-              <h3>Mini Idlies w/Sambhar (Qty:12)</h3>
-              <p>Variety of Indian dishes</p>
-              <!-- <p class="price">$16.99</p> -->
-            </div>
-            </div>
-          <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Mini Idlies w/rasam (Qty. 12)">
-            <img src="assets/img/menu/Fish Curry.jpeg" alt="Mini Idlies w/rasam (Qty. 12)">
-            <div class="menu-item-content">
-              <h3>Mini Idlies w/rasam (Qty. 12)</h3>
-              <p>Variety of Indian dishes</p>
-              <!-- <p class="price">$16.99</p> -->
-            </div>
-        </div>
-        <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Lover's Idly w/Sambhar (Qty: 4)">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Lover's Idly w/Sambhar (Qty: 4)">
-          <div class="menu-item-content">
-            <h3>Lover's Idly w/Sambhar (Qty: 4)</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-      </div>
-      <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Lover's Idly w/Rasam (Qty: 4)">
-        <img src="assets/img/menu/Fish Curry.jpeg" alt="Lover's Idly w/Rasam (Qty: 4)">
-        <div class="menu-item-content">
-          <h3>Lover's Idly w/Rasam (Qty: 4)</h3>
-          <p>Variety of Indian dishes</p>
-          <!-- <p class="price">$16.99</p> -->
-        </div>
-    </div>
-    <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Kuzhi Paniyaram">
-      <img src="assets/img/menu/Fish Curry.jpeg" alt="Kuzhi Paniyaram">
-      <div class="menu-item-content">
-        <h3>Kuzhi Paniyaram</h3>
-        <p>Variety of Indian dishes</p>
-        <!-- <p class="price">$16.99</p> -->
-      </div>
-  </div>
-  <div class="menu-item" data-category="Vegetarian Appetizers" data-name="Iddly Chaat">
-    <img src="assets/img/menu/Fish Curry.jpeg" alt="Iddly Chaat">
-    <div class="menu-item-content">
-      <h3>Iddly Chaat</h3>
-      <p>Variety of Indian dishes</p>
-      <!-- <p class="price">$16.99</p> -->
-    </div>
-</div>
-
-
-<div class="menu-item" data-category="Non-Veg Appetizers" data-name="Chicken 65">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Chicken 65">
-  <div class="menu-item-content">
-    <h3>Chicken 65</h3>
-    <p>Variety of Indian dishes</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
-<div class="menu-item" data-category="Non-Veg Appetizers" data-name="Chicken Manchurian">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Chicken Manchurian">
-  <div class="menu-item-content">
-    <h3>Chicken Manchurian</h3>
-    <p>Variety of Indian dishes</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
-<div class="menu-item" data-category="Non-Veg Appetizers" data-name="Chicken 555">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Chicken 555">
-  <div class="menu-item-content">
-    <h3>Chicken 555</h3>
-    <p>Variety of Indian dishes</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
-
-
-<div class="menu-item" data-category="Quick Lunch Menu" data-name="Paneer Tacos">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Paneer Tacos">
-  <div class="menu-item-content">
-    <h3>Paneer Tacos</h3>
-    <p>Variety of Indian dishes</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
-
-
-<div class="menu-item" data-category="Quick Lunch Menu" data-name="Fish Tacos">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Fish Tacos">
-  <div class="menu-item-content">
-    <h3>Fish Tacos</h3>
-    <p>Variety of Indian dishes</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
-<div class="menu-item" data-category="Quick Lunch Menu" data-name="Chicken Tacos">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Chicken Tacos">
-  <div class="menu-item-content">
-    <h3>Chicken Tacos</h3>
-    <p>Variety of Indian dishes</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
-
-<div class="menu-item" data-category="Quick Lunch Menu" data-name="Shrimp Tacos">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Shrimp Tacos">
-  <div class="menu-item-content">
-    <h3>Shrimp Tacos</h3>
-    <p>Variety of Indian dishes</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
-
-
-<div class="menu-item" data-category="Quick Lunch Menu" data-name="Wrap - Chicken Tikka">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Wrap - Chicken Tikka">
-  <div class="menu-item-content">
-    <h3>Wrap - Chicken Tikka</h3>
-    <p>Variety of Indian dishes</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
-
-<div class="menu-item" data-category="Quick Lunch Menu" data-name="Wrap - Paneer Tikka">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Wrap - Paneer Tikka">
-  <div class="menu-item-content">
-    <h3>Wrap - Paneer Tikka</h3>
-    <p>Variety of Indian dishes</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
-
-
-<div class="menu-item" data-category="Quick Lunch Menu" data-name="Wrap - Fish Tikka">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Wrap - Fish Tikka">
-  <div class="menu-item-content">
-    <h3>Wrap - Fish Tikka</h3>
-    <p>Variety of Indian dishes</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
-
-<div class="menu-item" data-category="Quick Lunch Menu" data-name="Biriyani Bowl (20oz.)">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Biriyani Bowl (20oz.)">
-  <div class="menu-item-content">
-    <h3>Biriyani Bowl (20oz.)</h3>
-    <p>Variety of Indian dishes</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
-
-<div class="menu-item" data-category="Quick Lunch Menu" data-name="Butter Chicken with 4-pieces Naan">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Butter Chicken with 4-pieces Naan">
-  <div class="menu-item-content">
-    <h3>Butter Chicken with 4-pieces Naan</h3>
-    <p>Variety of Indian dishes</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
-
-<div class="menu-item" data-category="Quick Lunch Menu" data-name="Lunch Box - Veg">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Lunch Box - Veg">
-  <div class="menu-item-content">
-    <h3>Lunch Box - Veg</h3>
-    <p>Paneer, Dal, Rice, Naan</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
-<div class="menu-item" data-category="Quick Lunch Menu" data-name="Lunch Box - Non.Veg">
-  <img src="assets/img/menu/Fish Curry.jpeg" alt="Lunch Box - Non.Veg">
-  <div class="menu-item-content">
-    <h3>Lunch Box - Non.Veg</h3>
-    <p>Chicken, Dal, Rice, Naan</p>
-    <!-- <p class="price">$16.99</p> -->
-  </div>
-</div>
 
 
 
-        <div class="menu-item" data-category="Soups" data-name="Rasam Soup">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Rasam Soup">
-          <div class="menu-item-content">
-            <h3>Rasam Soup</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-        </div>
 
-        <div class="menu-item" data-category="Soups" data-name="Tomato Soup">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Tomato Soup">
-          <div class="menu-item-content">
-            <h3>Tomato Soup</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-        </div>
-
-        <div class="menu-item" data-category="Soups" data-name="Chicken Noodle Soup">
-          <img src="assets/img/menu/Fish Curry.jpeg" alt="Chicken Noodle Soup">
-          <div class="menu-item-content">
-            <h3>Chicken Noodle Soup</h3>
-            <p>Variety of Indian dishes</p>
-            <!-- <p class="price">$16.99</p> -->
-          </div>
-        </div>
-
-        Vegetarian Entrees
-        Paneer Makhni (Paneer Butter Masala)
-        Fresh homemade paneer cooked in a creamy tomato sauce
-        
-        $16.00
-        Dal Makhni
-        $15.99
-        
-      </div>
-    </div>
-
-
-
-  </section>
     </div></div>
 
       </div>
@@ -699,35 +393,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-  <script>
-     function filterMenu() {
-      const searchQuery = document
-        .getElementById("search")
-        .value.toLowerCase();
-      const filterCategory = document.getElementById("filter").value;
-      const menuItems = document.querySelectorAll(".menu-item");
 
-      menuItems.forEach((item) => {
-        const itemName = item.dataset.name.toLowerCase();
-        const itemCategory = item.dataset.category;
-
-        // Logic for Search and Filter
-        const matchesSearch = itemName.includes(searchQuery);
-        const matchesFilter =
-          filterCategory === "all" || itemCategory === filterCategory;
-
-        // Show or Hide items
-        if (matchesSearch && matchesFilter) {
-          item.style.display = "block";
-        } else {
-          item.style.display = "none";
-        }
-      });
-    }
-  </script>
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
 
 </html>
+
+
