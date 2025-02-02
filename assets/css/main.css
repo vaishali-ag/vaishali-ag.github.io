@@ -186,23 +186,23 @@ section.page-heading {
   color: white;
 }
 
-
 .page-heading h1 {
-	margin-top: 0px;
+  font-family:'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 3rem; /* Adjust based on screen size */
+  margin-top: 0;
   margin-bottom: 20px;
-  /* font-family:cursive ; */
-  font-size: 48px;
-  font-weight: 800;
   text-transform: uppercase;
   color: #000;
-
   background: rgba(222, 220, 220, 0.5); 
-  /* border: 2px solid #059652;  */
   display: inline-block;
-  padding: 10px 20px; 
+  padding: 10px 20px;
   border-radius: 5px;
-
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
+
+
+
 
 .page-heading p {
 	color: #fff;
@@ -232,8 +232,8 @@ section.page-heading {
   }
 
   .page-heading h1 {
-    font-size: 30px;
-    padding: 6px 14px;
+    font-size: 2.5rem; /* Adjust size for smaller screens */
+    padding: 8px 15px; /* Adjust padding for smaller screens */
   }
 
   .page-heading p {
@@ -248,7 +248,7 @@ section.page-heading {
   }
 
   .page-heading h1 {
-    font-size: 26px;
+    font-size: 2rem; /* Further reduce font size for very small screens */
     padding: 5px 10px;
   }
 
@@ -1805,11 +1805,12 @@ section,
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  
 }
 
 .button-overlay a {
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 22px;
   color: white;
   background-color: var(--accent-color);
   border: none;
@@ -1822,6 +1823,7 @@ section,
   background-color: var(--accent-color);
   transform: scale(1.05);
 }
+
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
@@ -1851,26 +1853,11 @@ section,
   }
 
   .button-overlay a {
-    font-size: 16px;
+    font-size: 20px;
     padding: 8px 15px;
   }
 }
-/* @media (max-width: 768px) {
-  .row.gy-4 {
-    gap: 20px; 
-  }
 
-  .content {
-    margin-top: 15px;
-    padding: 10px;
-  }
-
-  .image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-} */
 
 @media (max-width: 768px) {
   .row.gy-4 {
@@ -1909,18 +1896,36 @@ section,
   }
 
   .button-overlay a {
-    font-size: 14px;
+    font-size: 20px;
     padding: 6px 12px;
   }
    .btn-click {
-    font-size: 16px; /* Increase text size */
+    font-size: 20px; /* Increase text size */
     padding: 12px 24px; /* Increase button padding */
   }
 
   .btn-getstarted {
-    font-size: 16px; /* Increase text size */
+    font-size: 20px; /* Increase text size */
     padding: 14px 28px; /* Increase button padding */
   }
+  .button-overlay {
+    width: 100%; /* Ensure button container matches image width */
+    display: flex;
+    justify-content: center;
+    padding: 10px; /* Center the button */
+  }
+
+  .btn-click, .btn-getstarted {
+    width: 100%; /* Make button match image width */
+    text-align: center; /* Ensure text stays centered */
+    font-size: 16px;
+    padding: 12px 0;
+  }
+
+  .image-container {
+    width: 100%; /* Ensure the image container uses full width */
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -2743,7 +2748,7 @@ margin-top: 0;
 --------------------------------------------------------------*/
 .info-item {
   background: #f2f2f2; 
-  border: 1px solid #059652; 
+  /* border: 1px solid #059652;  */
   border-radius: 8px; 
   padding: 20px; 
   text-align: center; 
@@ -2765,6 +2770,7 @@ margin-top: 0;
   font-size: 0.9rem;
   color: #fff;
 }
+
 
 /* Optional: Ensure all columns align in height */
 .row > .col-lg-3, .row > .col-md-6 {
@@ -2872,6 +2878,60 @@ margin-top: 0;
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+@media (max-width: 768px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap; /* Ensures that items wrap to the next line if needed */
+    justify-content: center; /* Center the items horizontally */
+  }
+  .info-item {
+    width: 90%; /* Adjust width based on your preference, could be 80% or 75% */
+    max-width: 350px; /* Set a maximum width to avoid the item becoming too wide on larger mobile screens */
+    height: auto; /* Allow height to adjust dynamically based on content */
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .info-item h3 {
+    font-size: 1.1rem; /* Reduce heading size */
+  }
+
+  .info-item p {
+    font-size: 0.85rem; /* Adjust paragraph font */
+  }
+
+  /* Stack columns vertically */
+  .row > .col-lg-3, .row > .col-md-6 {
+    display: flex;
+    align-items: stretch; /* Stretch items to the same height */
+    justify-content: center;
+  }
+
+  .contact .info-item {
+    padding: 15px 20px; /* Adjust padding */
+  }
+
+  .contact .info-item h3 {
+    font-size: 18px; /* Smaller heading */
+  }
+
+  .contact .info-item p {
+    font-size: 13px; /* Adjust paragraph font size */
+  }
+
+  .contact .php-email-form {
+    padding: 20px; /* Reduce padding */
+    margin-top: 20px; /* Adjust spacing */
+  }
+
+  .contact .php-email-form h1 {
+    font-size: 1.8rem; /* Slightly smaller for mobile */
+  }
 }
 
 
