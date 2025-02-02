@@ -190,7 +190,7 @@ section.page-heading {
 .page-heading h1 {
 	margin-top: 0px;
   margin-bottom: 20px;
-  font-family:cursive ;
+  /* font-family:cursive ; */
   font-size: 48px;
   font-weight: 800;
   text-transform: uppercase;
@@ -828,8 +828,9 @@ padding: 1%;
 @media (max-width: 768px) {
   /* Adjust carousel size */
   .carousel-inner img {
-    height: 250px;
+    height: auto;
     object-fit: cover;
+    width: auto;
   }
   
   .carousel-caption h5 {
