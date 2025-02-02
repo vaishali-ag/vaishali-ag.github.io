@@ -19,9 +19,9 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #e3ddcc ; /* Background color for the entire website, including individual sections */
-  --default-color: #c71f2c; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #f30707; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #c71f2c; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #f30707; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -636,7 +636,9 @@ padding: 1%;
 
 /* Icon Box Styling */
 .icon-box {
-  background: #e3ddcc;
+  /* background: #e3ddcc; */
+  background: #000;
+
   border-radius: 10px;
   padding: 20px;
   width: 100%;
@@ -653,33 +655,42 @@ padding: 1%;
 
 .icon-box i {
   font-size: 2rem;
-  color: #c71f2c;
+  color: #f30707;
+  
   margin-bottom: 15px;
 }
 
 .icon-box h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
+  /* color: #333; */
+  color: #f7c11f;
   text-transform: uppercase;
 }
 
 .icon-box p {
   font-size: 0.9rem;
   margin-bottom: 15px;
-  color: #666;
+  /* color: #666; */
+  color: #fff;
+
 }
 
-.icon-box:hover h2,
+.icon-box:hover h2{
+    /* color: #f30707;  */
+    color: #f7c11f;
+  }
+
 .icon-box:hover p {
-  color: #c71f2c; /* Text color change on hover */
+  /* color: #f30707;  */
+  color: #fff;
 }
 
 /* Button Styling */
 .btn-getstarted {
   display: inline-block;
   padding: 10px 20px;
-  background: #cb340a;
+  background: #f30707;
   color: white;
   text-decoration: none;
   font-size: 0.9rem;
@@ -690,7 +701,7 @@ padding: 1%;
 }
 
 .btn-getstarted:hover {
-  background: #a80000;
+  background: #fff;
 }
 
 
