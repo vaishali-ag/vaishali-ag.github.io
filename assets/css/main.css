@@ -488,37 +488,45 @@ padding: 1%;
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-/* background-color: #e3ddcc; */
   background-color: #000;
-  padding: 40px 0;
+  padding: 20px 0; /* Adjust padding */
   transition: all 0.5s;
   z-index: 997;
   margin-bottom: 0;
-  height: 10px;
-  /* background: rgba(0, 0, 0, 0.5); */
-  /* position: absolute; 
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 997;
-  margin-bottom: 0;
-  height: 100px;
-  transition: all 0.5s; */
-
+  height: 80px; /* Adjust height */
+  display: flex;
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Distribute items evenly */
 }
 
 .header .logo {
-  line-height: 1;
+  display: flex;
+  align-items: center; /* Vertically align logo */
+  justify-content: center; /* Center the logo */
+  height: 100%; /* Ensure logo aligns well with header height */
 }
 
 .header .logo img {
-  max-height: 200px;
-  margin-right: 50px;
-
-
-
-   
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  max-height: 70px; /* Adjust logo height based on header height */
+  margin: 0;
 }
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 0; /* Reduce padding on smaller screens */
+    height: auto; /* Adjust height for small screens */
+  }
+
+  .header .logo img {
+    max-height: 50px; /* Adjust logo height for mobile */
+  }
+}
+
+
 
 .header .logo h1 {
   font-size: 30px;
@@ -867,6 +875,9 @@ padding: 1%;
   .navmenu {
     margin: 0;
     padding: 0;
+    height: 60px; /* Adjust this height as needed */
+  display: flex;
+  align-items: center;
 
   }
   
