@@ -349,8 +349,18 @@ h6 {
 padding: 1%;
   position: relative;
   font-size: 2rem;
-}
+  margin-top: 1%;
+  margin-bottom: 1%;
+}@media (max-width: 786px) {
+  .heading-index{
+    font-size: 1rem;;
+  }
 
+  .content {
+    padding: 10px;
+    max-width: 98%;
+  }
+}
 /* Pulsating Play Button
 ------------------------------*/
 
