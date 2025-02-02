@@ -251,7 +251,24 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
-
+  <script>
+    function setCarouselImages() {
+      const images = document.querySelectorAll('.carousel-item img');
+      if (window.innerWidth <= 767) {  // Check if screen width is 767px or smaller
+        images[0].src = "assets/img/banner/mobile1.jpeg";
+        images[1].src = "assets/img/banner/mobile2.jpeg";
+        images[2].src = "assets/img/banner/mobile3.jpeg";
+      } else {
+        images[0].src = "assets/img/banner/banner11.jpeg";
+        images[1].src = "assets/img/banner/banner12.jpeg";
+        images[2].src = "assets/img/banner/banner-8.jpeg";
+      }
+    }
+  
+    window.addEventListener('resize', setCarouselImages);  // Trigger on window resize
+    window.addEventListener('load', setCarouselImages);    // Trigger on page load
+  </script>
+  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>

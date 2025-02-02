@@ -201,6 +201,7 @@
     showSlide(currentIndex);
     startAutoChange();
   });
+  
 
   /**
    * Init isotope layout and filters
