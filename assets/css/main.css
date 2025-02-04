@@ -519,20 +519,19 @@ padding: 1%;
 .header .logo img {
   max-width: 100%;
   width: auto;
-  height: auto;
+  height: 200px;
   display: block;
-  max-height: 70px; /* Adjust logo height based on header height */
   margin: 0;
 }
 
 @media (max-width: 768px) {
   .header {
     padding: 10px 0; /* Reduce padding on smaller screens */
-    height: auto; /* Adjust height for small screens */
+    height: 100px; /* Adjust height for small screens */
   }
 
   .header .logo img {
-    max-height: 50px; /* Adjust logo height for mobile */
+    max-height: 20%; /* Adjust logo height for mobile */
   }
 }
 
