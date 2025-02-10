@@ -567,6 +567,18 @@ padding: 1%;
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
+@media screen and (max-width: 767px) {
+
+  .header .btn-getstarted {
+    width: 40%; /* Make button match image width */
+    text-align: center; /* Ensure text stays centered */
+    font-size: 16px;
+    padding: 12px 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+}
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
@@ -712,6 +724,8 @@ padding: 1%;
 .btn-getstarted:hover {
   background: #fff;
 }
+
+
 
 
 
