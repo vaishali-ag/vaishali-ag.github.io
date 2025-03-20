@@ -794,10 +794,11 @@ padding: 1%;
 
 /* Ensure Images Cover the Carousel Fully */
 .carousel-inner img {
-  object-fit: cover;
+  display: block; /* Changed from flex to block */
+  /* object-fit: cover; */
   width: 100%;
   height: auto;
-  max-height: 600px; /* Ensures images don't become too tall */
+  max-height: 625px;
 }
 
 /* Carousel Caption Styling */
@@ -806,6 +807,7 @@ padding: 1%;
   border-radius: 10px;
   text-align: center;
   bottom: 15%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Heading inside Caption */
@@ -826,13 +828,14 @@ padding: 1%;
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
   .carousel-inner img {
-    max-height: 500px; /* Adjust height for tablets */
+    
+    max-height: 600px; /* Adjust height for tablets */
   }
 }
 
 @media (max-width: 768px) {
   .carousel-inner img {
-    max-height: 400px; /* Adjust height for smaller screens */
+    max-height: 600px; /* Adjust height for smaller screens */
   }
   
   .carousel-caption {
@@ -869,7 +872,6 @@ padding: 1%;
 }
 
 @media (max-width: 768px) {
-  /* Adjust carousel size */
   .carousel-inner img {
     height: auto;
     object-fit: cover;
