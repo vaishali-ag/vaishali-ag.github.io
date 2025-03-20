@@ -3169,9 +3169,9 @@ color: #c71f2c;
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
-  background-color: #f1f1f1;
+  background-color: #ffff;
   border-bottom: 1px solid #ddd;
-  scrollbar-width: thin; /* Firefox */
+  scrollbar-width: thin;
 }
 
 .menu-tabs::-webkit-scrollbar {
@@ -3185,21 +3185,48 @@ color: #c71f2c;
 
 .menu-tabs::-webkit-scrollbar-track {
   background: #e9ecef;
+  
+}
+.menu-tab-img {
+  width: 80px;
+  height: 80px; /* Make width and height equal for a perfect circle */
+  border-radius: 50%; /* Make it a circle */
+  overflow: hidden;
+  position: relative; /* Needed for absolute positioning of the border */
 }
 
+.menu-tab-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-tab-img::after {
+  content: "";
+  position: absolute;
+  top: -3px; /* Adjust as needed for border thickness */
+  left: -3px; /* Adjust as needed for border thickness */
+  right: -3px; /* Adjust as needed for border thickness */
+  bottom: -3px; /* Adjust as needed for border thickness */
+  border: 5px solid #ecb216; /* Golden border */
+  border-radius: 50%; /* Circle border */
+  pointer-events: none; /* Prevent border from interfering with clicks */
+}
 .menu-tabs a {
-  flex: 0 0 auto;
-  text-align: center;
-  padding: 10px 15px;
+  /* Existing styles for the anchor tag */
+  display: flex; /* Use flexbox to align image and text */
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  padding: 10px; /* Adjust padding as needed */
+  margin: 5px; /* Adjust margin as needed */
+  /* background-color: #e9ecef; */
+  border-radius: 15px; /* Adjust as needed */
   text-decoration: none;
   color: #555;
   font-weight: bold;
-  border-right: 1px solid #ddd;
+  border: none;
   transition: background-color 0.3s;
-}
-
-.menu-tabs a:last-child {
-  border-right: none;
 }
 
 .menu-tabs a.active {
@@ -3209,6 +3236,12 @@ color: #c71f2c;
 
 .menu-tabs a:hover {
   background-color: #000;
+  color: white;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Scrollable Menu Content */
@@ -3247,7 +3280,7 @@ color: #c71f2c;
 }
 
 .menu-item-details {
-  flex-grow: .01;
+  /* flex-grow: .01; */
 }
 
 .menu-item-title {
@@ -3263,18 +3296,28 @@ color: #c71f2c;
 .menu-item-price {
   font-weight: bold;
   color: #333;
+  display: flex;
 }
 .search-bar {
+  margin: 10px;
   position: relative;
 }
 
 .search-bar input {
-  padding: 10px 10px;
+  padding: 10px 10px 10px 30px; /* Add space for the icon */
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
 }
-
+.search-bar::before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.397h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>'); /* Magnifying glass icon */
+  position: absolute;
+  top: 12px; /* Adjust top position as needed */
+  left: 10px; /* Adjust left position as needed */
+  color: #999;
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .menu-item img {
