@@ -99,7 +99,7 @@ body, html {
 }
 
 div.takeout-bg{
-  background-image: url(../img/menu/Fish\ Curry.jpeg) ;
+  background-image: url(../img/banner/banner.jpeg) ;
   background-repeat: no-repeat;
   background-size: cover; /* Ensures the image covers the container */
   background-position: center center; /* Center the image */
@@ -112,7 +112,7 @@ div.takeout-bg{
   /* border-radius: 1%; */
 }
 div.catering-bg{
-  background-image: url(../img/menu/Squid\ 65.jpeg) ;
+  background-image: url(../img/banner/banner.jpeg) ;
   background-repeat: no-repeat;
   background-size: cover; /* Ensures the image covers the container */
   background-position: center center; /* Center the image */
@@ -123,7 +123,7 @@ div.catering-bg{
 
 }
 div.corporate-bg{
-  background-image: url(../img/menu/Pomfret\ fish\ fry.jpeg) ;
+  background-image: url(../img/banner/banner.jpeg) ;
   background-repeat: no-repeat;
   background-size: cover; /* Ensures the image covers the container */
   background-position: center center; /* Center the image */
@@ -134,7 +134,7 @@ div.corporate-bg{
 
 }
 div.about-bg{
-  background-image: url(../img/menu/Pomfret\ fish\ fry.jpeg) ;
+  background-image: url(../img/banner/banner.jpeg) ;
   background-repeat: no-repeat;
   background-size: cover; /* Ensures the image covers the container */
   background-position: center center; /* Center the image */
@@ -145,7 +145,7 @@ div.about-bg{
 
 }
 div.menu-bg{
-  background-image: url(../img/banner/heading1.jpeg) ;
+  background-image: url(../img/banner/banner.jpeg) ;
   background-repeat: no-repeat;
   background-size: cover; /* Ensures the image covers the container */
   background-position: center center; /* Center the image */
@@ -157,7 +157,7 @@ div.menu-bg{
 }
 
 div.cateringRequest-bg{
-  background-image: url(../img/menu/Paya\ \(Lamb\)\ trotters.jpeg) ;
+  background-image: url(../img/banner/banner.jpeg) ;
   background-repeat: no-repeat;
   background-size: cover; /* Ensures the image covers the container */
   background-position: center center; /* Center the image */
@@ -168,7 +168,7 @@ div.cateringRequest-bg{
 
 }
 div.contact-bg{
-  background-image: url(../img/aboutus.jpeg);
+  background-image: url(../img/banner/banner.jpeg) ;
   background-repeat: no-repeat;
   background-size: cover; /* Ensures the image covers the container */
   background-position: center center; /* Center the image */
@@ -259,7 +259,7 @@ section.page-heading {
 }
 /* about section background */
 .background-section {
-  background-image: url("../img/banner/about.jpg");
+  background-image: url("../img/banner/background.jpg");
   background-size: cover;
   background-position: center;
   padding: 10px;
@@ -519,9 +519,9 @@ padding: 1%;
 .header .logo img {
   max-width: 100%;
   width: auto;
-  height: 200px;
+  height: 100px;
   display: block;
-  margin: 0;
+  margin: 10px;
 }
 
 @media (max-width: 768px) {
