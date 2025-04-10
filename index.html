@@ -1,400 +1,721 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Belly-Delhi</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="AdmukhLogo.jpeg">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
-
+    <title>AdMukh</title>
 </head>
 
-<body class="starter-page-page">
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
 
-    <!-- <img src="assets/img/logo.png" height="200px" width="200px" class="text-center"> -->
-  
-    <div class="container position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="">
-        <!-- <h1 class="sitename">Yummy</h1> -->
-        <!-- <span>.</span> -->
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home<br></a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="Menu.html">Menu</a></li>
-          <li><a href="Catering.html">Catering</a></li>
-          <li><a href="Corporate.html">Corporates</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-
-          <li><a href="https://www.smorefood.com/2qq38mch/kaaraikudi-formerly-shree-indian-restaurant-and-bar-westmont-60559/order-online">Take Out</a></li>          
-          <li><a href="Contact.html">Contact</a></li>
-
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="https://www.smorefood.com/2qq38mch/kaaraikudi-formerly-shree-indian-restaurant-and-bar-westmont-60559/order-online">Order Online</a>
-
-    </div>
-  </header>
-
-  <main class="main">
-    <div class="starter-background-section">
-      <div  class="starter-content">
-    <!-- <section id="baner-section" class="banner-section section"> -->
-
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" >
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/img/banner/banner1.jpg" loading="lazy" class="d-block w-100 img-fluid" alt="...">
-          <!-- <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5> 
-             <h5>Delight in the Best of  South & North Indian Flavors</h5>
-          </div> -->
+    <!-- TOP NAV -->
+    <div class="top-nav" id="home">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-auto">
+                    <p> <i class='bx bxs-envelope'></i> info@example.com</p>
+                    <p> <i class='bx bxs-phone-call'></i> 123 456-7890</p>
+                </div>
+                <div class="col-auto social-icons">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-pinterest'></i></a>
+                </div>
+            </div>
         </div>
-        <div class="carousel-item">
-          <img src="assets/img/banner/banner2.jpg" loading="lazy" class="d-block w-100 img-fluid" alt="...">
-          <!-- <div class="carousel-caption d-none d-md-block">
-            <h5> Veg & Non-Veg Delicacies for Every Taste!</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div> -->
-        </div>
-        <div class="carousel-item">
-          <img src="assets/img/banner/banner3.jpg" loading="lazy" class="d-block w-100 img-fluid" alt="...">
-          <!-- <div class="carousel-caption d-none d-md-block">
-            <h5>Delicious Food As per your spice taste</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div> -->
-        </div>
-        <div class="carousel-item">
-          <img src="assets/img/banner/banner4.jpg" loading="lazy" class="d-block w-100 img-fluid" alt="...">
-          <!-- <div class="carousel-caption d-none d-md-block">
-            <h5> Veg & Non-Veg Delicacies for Every Taste!</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div> -->
-        </div>
-        <div class="carousel-item">
-          <img src="assets/img/banner/banner5.jpg" loading="lazy" class="d-block w-100 img-fluid" alt="...">
-          <!-- <div class="carousel-caption d-none d-md-block">
-            <h5> Veg & Non-Veg Delicacies for Every Taste!</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div> -->
-        </div>
-      
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  <!-- </section>
-   
-<section id="video-section" class="video-section section"> -->
-  <h3 class="heading-index" id="heading-index" >We Serve Authentic Food</h3>
-<div id="video-section" class="video-section section">
-      <!-- Section Title -->
-        <video autoplay muted loop id="bg-video">
-            <source src="assets/img/video bg.MP4"  type="video/mp4" />
-        </video>
-  <div class="video-overlay">
-    <div class="col-lg-8">
-      <!-- Box 1 -->
-      <div class="icon-box"  >
-        <h2>CORPORATE</h2>
-        <p>Host Your Next Corporate Gathering with Authentic Indian Flavors</p>
-        <a class="btn-getstarted" href="Contact.html">INQUIRE NOW</a>
-      </div>
-  
-      <!-- Box 2 -->
-      <div class="icon-box"  >
-        <h2>DINE-IN </h2>
-        <p>Savor the Richness of Indian Cuisine in a Cozy Ambiance
-        </p>
-        <a class="btn-getstarted" href="https://www.smorefood.com/2qq38mch/kaaraikudi-formerly-shree-indian-restaurant-and-bar-westmont-60559/order-online">VIEW MENU</a>
-      </div>
-  
-      <!-- Box 3 -->
-      <div class="icon-box"  >
-        <h2>Take Out</h2>
-        <p>From Flavorful Curries to Tandoori Delights—Enjoy Indian Cuisine on the Go!
-        </p>
-        <a class="btn-getstarted" href="https://www.smorefood.com/2qq38mch/kaaraikudi-formerly-shree-indian-restaurant-and-bar-westmont-60559/order-online">ORDER NOW</a>
-      </div>
-  
-      <!-- Box 4 -->
-      <div class="icon-box" >
-        <h2>CATERING</h2>
-        <p>Bring the Essence of Indian Spices & Aromas to Your Special Occasion
-        </p>
-        <a class="btn-getstarted" href="CateringRequestForm.html">INQUIRE NOW</a>
-      </div>
-    </div>
-  </div>
-  
-</div>
-</div>
-<br>
-
-     
-<section id="testimonials" class="testimonials section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <p>Testimonials</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="swiper init-swiper" data-speed="600" data-delay="5000" 
-    data-breakpoints="{ &quot;320&quot;: { &quot;slidesPerView&quot;: 1,
-       &quot;spaceBetween&quot;: 40 }, &quot;1200&quot;: { &quot;slidesPerView&quot;: 3, &quot;spaceBetween&quot;: 40 } }">
-      <script type="application/json" class="swiper-config">
-        {
-          "loop": true,
-          "speed": 600,
-          "autoplay": {
-            "delay": 5000
-          },
-          "slidesPerView": "auto",
-          "pagination": {
-            "el": ".swiper-pagination",
-            "type": "bullets",
-            "clickable": true
-          },
-          "breakpoints": {
-            "320": {
-              "slidesPerView": 1,
-              "spaceBetween": 40
-            },
-            "1200": {
-              "slidesPerView": 3,
-              "spaceBetween": 20
-            }
-          }
-        }
-      </script>
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            
-              <img src="assets/img/testimonials/3.jpeg">
-          </div>
-        </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            
-              <img src="assets/img/testimonials/4.jpeg">
-          </div>
-        </div><!-- End testimonial item -->
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-          
-              <img src="assets/img/testimonials/5.jpeg">
-          </div>
-        </div><!-- End testimonial item -->
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-          
-              <img src="assets/img/testimonials/6.jpeg">
-          </div>
-        </div><!-- End testimonial item -->
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-           
-              <img src="assets/img/testimonials/7.jpeg">
-          </div>
-        </div><!-- End testimonial item -->
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            
-              <img src="assets/img/testimonials/8.jpeg">
-          </div>
-        </div><!-- End testimonial item -->
-      </div>
-      <div class="swiper-pagination"></div>
     </div>
 
-  </div>
-
-</section><!-- /Testimonials Section -->
-<br>    
-<div class="delivery-banner">
-  <div class="banner-content">
-    <h2>Visit Our Resturant</h2>
-    <p> Enjoy rich Indian flavors in a warm, inviting atmosphere. Every meal is a celebration, crafted to suit your taste</p>
-    <p> <div class="address">
-      <h3>Address: </h3>
-      <p>655 N Cass Avenue, Westmont,IL</p>
-      <p>United States,Illinois</p>
-        </div></p>
-    <div class="delivery-options">
-
-      <a class="btn-getstarted" href="Contact.html">Get Direction</a>
-
-    
-    </div>
-  </div>
-</div>
-</div>
-</div>
-    <!-- </section>/Starter Section Section -->
-  </div>
-</div>
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-
-    <div class="container">
-      <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-geo-alt icon"></i>
-          <div class="address">
-            <h4>Address</h4>
-            <p>655 N Cass Avenue, Westmont,IL,</p>
-            <p>United States,Illinois</p>
-            <p></p>
-          </div>
-
+    <!-- BOTTOM NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">AdMukh<span class="dot">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                </ul>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    class="btn btn-brand ms-lg-3">Contact</a>
+            </div>
         </div>
+    </nav>
 
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-telephone icon"></i>
-          <div>
-            <h4>Contact</h4>
-            <p>
-              <strong>Phone:</strong> <span><a href="tel:+1 6306551021">+1 (630) 655-1021</a></span><br>
-              <strong>Email:</strong> <span>Care@kkillinois.com</span><br>
-            </p>
-          </div>
+    <!-- SLIDER -->
+    <div class="owl-carousel owl-theme hero-slider">
+        <div class="slide slide1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center text-white">
+                        <h6 class="text-white text-uppercase">design Driven for professional</h6>
+                        <h1 class="display-3 my-4">We craft digital<br />experiances</h1>
+                        <a href="#" class="btn btn-brand">Get Started</a>
+                        <a href="#" class="btn btn-outline-light ms-3">Our work</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Opening Hours</h4>
-            <p>
-              <table>
-                <tr>  <td> Monday -</td>   <td> Closed</td></tr>
-                <tr>  <td> Tues-Sat -</td>   <td> 11:00AM - 3:00PM</td></tr>
-                <tr>  <td>  </td>   <td> 5:00PM - 10:PM</td></tr>
-              </table>
-            
-            </p>
-          </div>
+        <div class="slide slide2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-10 offset-lg-1 text-white">
+                        <h6 class="text-white text-uppercase">We craft digital experiances</h6>
+                        <h1 class="display-3 my-4">Design Driven For <br />Professionals</h1>
+                        <a href="#" class="btn btn-brand">Get Started</a>
+                        <a href="#" class="btn btn-outline-light ms-3">Our work</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="col-lg-3 col-md-6">
-          <h4>Follow Us</h4>
-          <div class="social-links d-flex">
-            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-      </div>
     </div>
 
- 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <a href ="privacypolicy.html">
-        <strong class="px-1 sitename">PrivacyPolicy</strong></a> <span>All Rights Reserved</span></p>
-      <div class="credits">
-       
-        Designed by <a href="https://github.com/vaishali-ag" target="_blank">Vaishali</a>
-      </div>
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 py-5">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="info-box">
+                                <img src="img/icon6.png" alt="">
+                                <div class="ms-4">
+                                    
+                                    <h5>Expert Freelancers</h5>
+                                    <p>Each team member is a specialist in their domain, ensuring top-tier talent for every aspect of your project. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <div class="info-box">
+                                <img src="img/icon4.png" alt="">
+                                <div class="ms-4">
+                                    <h5>5+ Years of Experience</h5>
+                                    <p>We bring proven expertise and deep industry knowledge to the table.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <div class="info-box">
+                                <img src="img/icon5.png" alt="">
+                                <div class="ms-4">
+                                    <h5>Results-Driven Approach</h5>
+                                    <p>We focus on delivering measurable outcomes that align with your business goals. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <div class="info-box">
+                                <img src="img/icon4.png" alt="">
+                                <div class="ms-4">
+                                    <h5>Collaborative Model</h5>
+                                    <p>Enjoy the flexibility of freelancing with the efficiency of a dedicated team.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <div class="info-box">
+                                <img src="img/icon4.png" alt="">
+                                <div class="ms-4">
+                                    <h5>Tailored Solutions</h5>
+                                    <p>From digital marketing to software development, design, and business strategy — we craft solutions that fit your needs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <div class="info-box">
+                                <img src="img/icon4.png" alt="">
+                                <div class="ms-4">
+                                    <h5>Seamless Experience</h5>
+                                    <p>We ensure a smooth, coordinated project experience from start to finish.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <div class="info-box">
+                                <img src="img/icon4.png" alt="">
+                                <div class="ms-4">
+                                    <h5>Trusted Partnership</h5>
+                                    <p>We're more than just a service provider — we're your growth partner.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <img src="img/about.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MILESTONE -->
+    <!-- <section id="milestone">
+        <div class="container">
+            <div class="row text-center justify-content-center gy-4">
+                <div class="col-lg-2 col-sm-6">
+                    <h1 class="display-4">90K+</h1>
+                    <p class="mb-0">Happy Clients</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h1 class="display-4">45M</h1>
+                    <p class="mb-0">Lines of code</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h1 class="display-4">190</h1>
+                    <p class="mb-0">Total Downloads</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h1 class="display-4">380K</h1>
+                    <p class="mb-0">YouTube Subscribers</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="services" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="intro">
+                        <h6>Our Services</h6>
+                        <h1>What We Do?</h1>
+                        <!-- <p class="mx-auto">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                            roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service" >
+                        <img src="img/icon1.png" alt="">
+                        <h5>Social Media Marketing</h5>
+                        <ul class="service-details">
+                            <li>Strategy Development</li>
+                            <li>Content Creation & Management</li>
+                            <li>Platform Management</li>
+                            <li>Influencer Collaboration</li>
+                            <li>Analytics & Reporting</li>
+                          </ul>
+                    </div>
+                </div>
+                
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service">
+                        <img src="img/icon2.png" alt="">
+                        <h5>Performance Marketing</h5>
+                        <ul class="service-details">
+                            <li>Meta Ads (Facebook & Instagram Ads)</li>
+                            <li>Google Ads (Search, Display, YouTube, Performance Max)</li>
+                            <li>Bing Ads (Microsoft Advertising)</li>
+                            <li>A/B Testing & Performance Analysis</li>
+                            <li>Retargeting & Remarketing</li>
+                          </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service">
+                        <img src="img/icon3.png" alt="">
+                        <h5>Email Marketing</h5>      
+                          <ul class="service-details">
+
+                            <li>  Email Strategy & Campaign Planning</li>
+                                <li>List Building & Segmentation</li>
+                                    <li>Professional Email Design & Content</li>
+                                        <li>Automated Email Sequences</li>
+                                            <li>Promotional & Newsletter Emails</li>
+                                            </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service">
+                        <img src="img/icon4.png" alt="">
+                        <h5>Website Development</h5>
+                        <ul class="service-details">
+
+                            <li>    Custom Website Design & Development</li>
+                                <li>  WordPress, Shopify, & Custom CMS Development</li>
+                                    <li>  E-Commerce Development</li>
+                                        <li>  Website Maintenance </li>
+                                        <li> Website Support</li>
+                                    </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service">
+                        <img src="img/icon5.png" alt="">
+                        <h5>Search Engine Optimization (SEO)</h5>
+                        <ul class="service-details">
+
+                            <li>        On-Page & Off-Page SEO</li>
+                                <li>  Technical SEO & Site Audits</li>
+                                    <li>  Keyword Research & Content Optimization</li>
+                                        <li>  Link Building & Authority Growth</li>
+                                            <li>  Local & Global SEO Strategies</li>
+                                            </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="intro">
+                        <h6>Work</h6>
+                        <h1>Successful projects</h1>
+                        <p class="mx-auto">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                            roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="projects-slider" class="owl-theme owl-carousel">
+            <div class="project">
+                <div class="overlay"></div>
+                <img src="img/project1.jpg" alt="">
+                <div class="content">
+                    <h2>Consulting Marketing</h2>
+                    <h6>Website Design</h6>
+                </div>
+            </div>
+            <div class="project">
+                <div class="overlay"></div>
+                <img src="img/project2.jpg" alt="">
+                <div class="content">
+                    <h2>Consulting Marketing</h2>
+                    <h6>Website Design</h6>
+                </div>
+            </div>
+            <div class="project">
+                <div class="overlay"></div>
+                <img src="img/project3.jpg" alt="">
+                <div class="content">
+                    <h2>Consulting Marketing</h2>
+                    <h6>Website Design</h6>
+                </div>
+            </div>
+            <div class="project">
+                <div class="overlay"></div>
+                <img src="img/project4.jpg" alt="">
+                <div class="content">
+                    <h2>Consulting Marketing</h2>
+                    <h6>Website Design</h6>
+                </div>
+            </div>
+            <div class="project">
+                <div class="overlay"></div>
+                <img src="img/project5.jpg" alt="">
+                <div class="content">
+                    <h2>Consulting Marketing</h2>
+                    <h6>Website Design</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="intro">
+                        <h6>Team</h6>
+                        <h1>Team Members</h1>
+                        <p class="mx-auto">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                            roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-8">
+                    <div class="team-member">
+                        <div class="image">
+                            <img src="img/team_1.jpg" alt="">
+                            <div class="social-icons">
+                                <a href="#"><i class='bx bxl-facebook'></i></a>
+                                <a href="#"><i class='bx bxl-twitter'></i></a>
+                                <a href="#"><i class='bx bxl-instagram'></i></a>
+                                <a href="#"><i class='bx bxl-pinterest'></i></a>
+                            </div>
+                            <div class="overlay"></div>
+                        </div>
+
+                        <h5>Marvin McKinney</h5>
+                        <p>Marketing Coordinator</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-8">
+                    <div class="team-member">
+                        <div class="image">
+                            <img src="img/team_2.jpg" alt="">
+                            <div class="social-icons">
+                                <a href="#"><i class='bx bxl-facebook'></i></a>
+                                <a href="#"><i class='bx bxl-twitter'></i></a>
+                                <a href="#"><i class='bx bxl-instagram'></i></a>
+                                <a href="#"><i class='bx bxl-pinterest'></i></a>
+                            </div>
+                            <div class="overlay"></div>
+                        </div>
+
+                        <h5>Kathryn Murphy</h5>
+                        <p>Ethical Hacker</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-8">
+                    <div class="team-member">
+                        <div class="image">
+                            <img src="img/team_3.jpg" alt="">
+                            <div class="social-icons">
+                                <a href="#"><i class='bx bxl-facebook'></i></a>
+                                <a href="#"><i class='bx bxl-twitter'></i></a>
+                                <a href="#"><i class='bx bxl-instagram'></i></a>
+                                <a href="#"><i class='bx bxl-pinterest'></i></a>
+                            </div>
+                            <div class="overlay"></div>
+                        </div>
+
+                        <h5>Darrell Steward</h5>
+                        <p>Software Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="bg-light" id="reviews">
+
+        <div class="owl-theme owl-carousel reviews-slider container">
+            <div class="review">
+                <div class="person">
+                    <img src="img/team_1.jpg" alt="">
+                    <h5>Kurtish Hajroja</h5>
+                        <h4>Steam Tech CEO (USA)</h4>
+                </div>
+                <h3>I am beyond impressed with the exceptional work of
+                    our Vidhu and our marketing team. They completely
+                    revamped our website and transformed our social
+                    media marketing, generating numerous leads for
+                    our e-commerce business. Their creativity,
+                    expertise, and dedication have truly set a new
+                    standard for our success. Thank you!</h3>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <i class='bx bxs-quote-alt-left'></i>
+            </div>
+            <div class="review">
+                <div class="person">
+                    <img src="img/team_2.jpg" alt="">
+                    <h5> Matthew
+                        </h5>
+                    <h4>Good Fucking Emails(UK). Co Founder</h4>
+                </div>
+                <h3>Hey Team,
+                    Amazing job with the ads! We are at
+                    capacity, are we able to reduce ad-
+                    spend to 20%? I do NOT want to reset
+                    ad learning.</h3>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <i class='bx bxs-quote-alt-left'></i>
+            </div>
+            <div class="review">
+                <div class="person">
+                    <img src="img/team_3.jpg" alt="">
+                    <h5>Tanvi Mangal</h5>
+                    <h4>Aadiras Ghee, Owner</h4>
+                </div>
+                <h3>We partnered with With Digital
+                    Evergreen Solutions N to launch and
+                    promote our new ghee brand, and the
+                    results have been outstanding! Their
+                    expertise in digital marketing helped us
+                    reach a wider audience, increase brand
+                    awareness, and drive real sales.</h3>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class="bx bxs-star-half"></i>
+                </div>
+                <i class='bx bxs-quote-alt-left'></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="intro">
+                        <h6>Blog</h6>
+                        <h1>Blog Posts</h1>
+                        <p class="mx-auto">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                            roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <article class="blog-post">
+                        <img src="img/project5.jpg" alt="">
+                        <a href="#" class="tag">Web Design</a>
+                        <div class="content">
+                            <small>01 Dec, 2022</small>
+                            <h5>Web Design trends in 2022</h5>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                                piece of classical Latin literature from</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="blog-post">
+                        <img src="img/project4.jpg" alt="">
+                        <a href="#" class="tag">Programming</a>
+                        <div class="content">
+                            <small>01 Dec, 2022</small>
+                            <h5>Web Design trends in 2022</h5>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                                piece of classical Latin literature from</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="blog-post">
+                        <img src="img/project2.jpg" alt="">
+                        <a href="#" class="tag">Marketing</a>
+                        <div class="content">
+                            <small>01 Dec, 2022</small>
+                            <h5>Web Design trends in 2022</h5>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                                piece of classical Latin literature from</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid faq-section bg-light py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="h-100">
+                            <div class="mb-5">
+                                <h4 class="text-primary">Some Important FAQ's</h4>
+                                <h1 class="display-4 mb-0">Common Frequently Asked Questions</h1>
+                            </div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Q: What happens during Freshers' Week?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show active" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body rounded">
+                                            A: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Q: What is the transfer application process?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            A: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Q: Why should I attend community college?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            A: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
+                        <img src="img/carousel-2.png" class="img-fluid w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <h4 class="navbar-brand">Admukh</h4>
+                       
+                        <div class="col-auto social-icons">
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                            <a href="#"><i class='bx bxl-instagram'></i></a>
+                            <a href="#"><i class='bx bxl-pinterest'></i></a>
+                        </div>
+                        <div class="col-auto conditions-section">
+                            <a href="#">privacy</a>
+                            <a href="#">terms</a>
+                            <a href="#">disclaimer</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p class="mb-0">Copyright vicpra 2022. All rights Reserved</p> 
+            <!-- Distributed By <a hrefs="https://themewagon.com">ThemeWagon</a> -->
+        </div>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="container-fluid">
+                        <div class="row gy-4">
+                            <div class="col-lg-4 col-sm-12 bg-cover"
+                                style="background-image: url(img/c2.jpg); min-height:300px;">
+                                <div>
+                                    <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/vaishali-agrawal-va2/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=540765" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <form class="p-lg-5 col-12 row g-3">
+                                    <div>
+                                        <h1>Get in touch</h1>
+                                        <p>Fell free to contact us and we will get back to you as soon as possible</p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="userName" class="form-label">First name</label>
+                                        <input type="text" class="form-control" placeholder="Jon" id="userName"
+                                            aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="userName" class="form-label">Last name</label>
+                                        <input type="text" class="form-control" placeholder="Doe" id="userName"
+                                            aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="userName" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" placeholder="Johndoe@example.com"
+                                            id="userName" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="exampleInputEmail1" class="form-label">Enter Message</label>
+                                        <textarea name="" placeholder="This is looking great and nice."
+                                            class="form-control" id="" rows="4"></textarea>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-brand">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 
 
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-  <script>
-    function setCarouselImages() {
-      const images = document.querySelectorAll('.carousel-item img');
-      if (window.innerWidth <= 767) {  // Check if screen width is 767px or smaller
-        images[0].src = "assets/img/banner/banner1.jpg";
-        images[1].src = "assets/img/banner/banner2.jpg";
-        images[2].src = "assets/img/banner/banner3.jpg";
-        images[3].src = "assets/img/banner/banner4.jpg";
-        images[4].src = "assets/img/banner/banner5.jpg";
-
-      } else {
-        images[0].src = "assets/img/banner/banner1.jpg";
-        images[1].src = "assets/img/banner/banner2.jpg";
-        images[2].src = "assets/img/banner/banner3.jpg";
-        images[3].src = "assets/img/banner/banner4.jpg";
-        images[4].src = "assets/img/banner/banner5.jpg";
 
 
-      }
-    }
-  
-    window.addEventListener('resize', setCarouselImages);  // Trigger on window resize
-    window.addEventListener('load', setCarouselImages);    // Trigger on page load
-  </script>
-  
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
 
+<script>
+    function toggleCard(card) {
+  card.classList.toggle('active');
+}
+    </script>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
